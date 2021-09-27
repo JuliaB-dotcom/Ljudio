@@ -3,9 +3,10 @@ import '/src/Start.css'
 function Start() {
   
   return (
-    
-    <h1 className="title">Ljudio</h1>
- 
+    <div>
+      <h1 className="title">Ljudio</h1>
+       <h1 className="title2">Ljudio</h1>
+    </div>
    
   )
 }
