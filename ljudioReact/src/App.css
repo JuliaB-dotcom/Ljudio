@@ -3,7 +3,8 @@
 }
 
 .baseDiv{
-  border: 1px solid green;
+  background-color: #1F0E88;
+ box-shadow: inset 1px 1px 40px 0 #000000;
 align-items: center;
 position: absolute;
 width: 100%;
