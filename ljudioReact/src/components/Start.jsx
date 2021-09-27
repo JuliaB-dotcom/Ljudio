@@ -3,9 +3,9 @@ import '/src/Start.css'
 function Start() {
   
   return (
-    <div className="baseDiv">
-<p>Hej!</p>
-    </div>
+    
+<p>Hellu!</p>
+   
   )
 }
 
