@@ -1,5 +1,5 @@
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 /*div{
 
 position: absolute;
@@ -47,14 +47,17 @@ background: #000000;
 
 }*/
 .songName{
+ 
+
+/* SONGNAME*/ 
 
 position: absolute;
 width: 222px;
 height: 39px;
-left: 25%;
-top: 70%;
+left: 73px;
+top: 510px;
 
-font-family: Julius Sans One;
+font-family:'Julius Sans One', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 36px;
@@ -62,23 +65,31 @@ line-height: 39px;
 text-align: center;
 
 color: #FFFFFF;
-border:10px;
+box-sizing: border-box;
+background: #000000;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #350E88;
 
+}
+
+.prevBtns{
+  margin-top:50%;
+margin-left:27%;
+border:10px;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #350E88;
 background: #000000;
 
 }
-.playButton {
-  font-size: 24px;
-  color:white;
+.nextBtns{
+margin-top:-55px;
+margin-left:40%;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #350E88;
 }
-.button{
-left: 25%;
-top: 70%;
+.playBtn{
+  margin-top:-20px;
+margin-left:35%;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #350E88;
 }
-.playerBtns{
-
-  display:flex;
-  margin-top: 25%;
-  margin-left: 30%; 
-}
-
