@@ -23,7 +23,7 @@ border: 0px transparent solid;
 
 }
 
-div{
+button{
   -webkit-text-stroke-width: 0;
 -webkit-text-stroke-color: #00000;
 }
@@ -48,5 +48,98 @@ text-align: center;
 color: white;
 background-color: transparent;
 border: 0px transparent solid;
+
+}
+
+.previous{
+  /* Group 4 */
+
+position: absolute;
+width: 55.36px;
+height: 44.98px;
+left: 96px;
+top: 486.02px;
+
+filter: drop-shadow(0px -3px 32px #0CEB15);
+box-shadow: 0px -3px 32px #0CEB15;
+
+
+/* Polygon 5 */
+
+position: absolute;
+width: 43.18px;
+height: 35.35px;
+left: 116.03px;
+top: 530.38px;
+
+background: #FFFFFF;
+
+
+
+/* Polygon 6 */
+
+position: absolute;
+width: 43.18px;
+height: 35.35px;
+left: 98.39px;
+top: 531px;
+
+background: #FFFFFF;
+
+
+}
+
+.play{
+
+  /* Polygon 7 */
+
+position: absolute;
+width: 43.16px;
+height: 50.76px;
+left: 209.67px;
+top: 486.88px;
+
+background: #FFFFFF;
+box-shadow: 0px -3px 32px #0CEB15;
+
+
+}
+
+.next{
+
+  /* Group 5 */
+
+position: absolute;
+width: 50.91px;
+height: 44.13px;
+left: 214.09px;
+top: 486px;
+
+
+
+/* Polygon 3 */
+
+position: absolute;
+width: 43.16px;
+height: 35.36px;
+left: 249.44px;
+top: 486.91px;
+
+background: #FFFFFF;
+
+
+
+/* Polygon 4 */
+
+position: absolute;
+width: 43.16px;
+height: 35.36px;
+left: 264.9px;
+top: 486px;
+
+background: #FFFFFF;
+
+box-shadow: 0px -3px 32px #0CEB15;
+
 
 }
