@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import Start from "./components/Start"
+//import Start from "./components/Start"
+import MiniPlayer from './components/MiniPlayer'
 import './App.css'
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="baseDiv">
 
-      <Start />
+      <MiniPlayer />
     </div>
       
   )

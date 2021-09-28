@@ -1,6 +1,6 @@
 
-
-div{
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+/*div{
 
 position: absolute;
 width: 360px;
@@ -10,19 +10,10 @@ top: 502px;
 
 filter: drop-shadow(2px -2px 28px #FFFFFF);
 
-
+*/
 /* Rectangle 2 */
 
-position: absolute;
-width: 360px;
-height: 91px;
-left: 0px;
-top: 502px;
-
-background: #000000;
-
-
-/* Rectangle 16 */
+/* Rectangle 16 
 
 position: absolute;
 width: 360px;
@@ -33,7 +24,7 @@ top: 580px;
 background: #000000;
 
 
-/* Rectangle 17 */
+/* Rectangle 17 
 
 position: absolute;
 width: 70px;
@@ -44,7 +35,7 @@ top: 593px;
 background: #000000;
 
 
-/* Rectangle 18 */
+/* Rectangle 18 
 
 position: absolute;
 width: 70px;
@@ -54,14 +45,14 @@ top: 593px;
 
 background: #000000;
 
-}
+}*/
 .songName{
 
 position: absolute;
 width: 222px;
 height: 39px;
-left: 73px;
-top: 510px;
+left: 25%;
+top: 70%;
 
 font-family: Julius Sans One;
 font-style: normal;
@@ -71,155 +62,23 @@ line-height: 39px;
 text-align: center;
 
 color: #FFFFFF;
-
-border: 1px solid #350E88;
-}
-/* Rectangle 19
-position: absolute;
-width: 70px;
-height: 37px;
-left: 264px;
-top: 593px;
+border:10px;
 
 background: #000000;
 
+}
+.playButton {
+  font-size: 24px;
+  color:white;
+}
+.button{
+left: 25%;
+top: 70%;
+}
+.playerBtns{
 
-/* playlists 
+  display:flex;
+  margin-top: 25%;
+  margin-left: 30%; 
+}
 
-position: absolute;
-width: 74px;
-height: 30px;
-left: 22px;
-top: 600px;
-
-font-family: Julius Sans One;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 15px;
-text-align: center;
-
-color: #FFFFFF;
-
-border: 1px solid #350E88;
-
-
-/* QUEUE 
-
-position: absolute;
-width: 74px;
-height: 30px;
-left: 141px;
-top: 603px;
-
-font-family: Julius Sans One;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 15px;
-text-align: center;
-
-color: #FFFFFF;
-
-border: 1px solid #350E88;
-
-
-/* Random 
-
-position: absolute;
-width: 74px;
-height: 30px;
-left: 260px;
-top: 603px;
-
-font-family: Julius Sans One;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 15px;
-text-align: center;
-
-color: #FFFFFF;
-
-border: 1px solid #350E88;
-
-
-/* Line 2
-
-position: absolute;
-width: 360px;
-height: 0px;
-left: 0px;
-top: 580px;
-
-border: 1px solid #000000;
-
-
-/* Polygon 2 
-
-position: absolute;
-width: 27.81px;
-height: 46px;
-left: 206px;
-top: 548.57px;
-
-background: #FFFFFF;
-border: 1px solid #350E88;
-box-sizing: border-box;
-transform: matrix(0, 1, -1, 0, 0, 0);
-
-
-/* Polygon 3 
-
-position: absolute;
-width: 27.81px;
-height: 32.04px;
-left: 242.04px;
-top: 548.59px;
-
-background: #FFFFFF;
-border: 1px solid #350E88;
-box-sizing: border-box;
-transform: matrix(0, 1, -1, 0, 0, 0);
-
-
-/* Polygon 5 
-
-position: absolute;
-width: 27.87px;
-height: 32.02px;
-left: 121.15px;
-top: 576.6px;
-
-background: #FFFFFF;
-border: 1px solid #350E88;
-box-sizing: border-box;
-transform: matrix(-0.08, -0.99, 1, -0.03, 0, 0);
-
-
-/* Polygon 4 
-
-position: absolute;
-width: 27.81px;
-height: 32.04px;
-left: 256.04px;
-top: 548px;
-
-background: #FFFFFF;
-border: 1px solid #350E88;
-box-sizing: border-box;
-transform: matrix(0, 1, -1, 0, 0, 0);
-
-
-/* Polygon 6 
-
-position: absolute;
-width: 27.87px;
-height: 32.02px;
-left: 105.17px;
-top: 577px;
-
-background: #FFFFFF;
-border: 1px solid #350E88;
-box-sizing: border-box;
-transform: matrix(-0.08, -0.99, 1, -0.03, 0, 0);
