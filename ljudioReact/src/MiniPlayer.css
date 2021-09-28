@@ -1,69 +1,6 @@
 
 
-/* START */
-
-position: relative;
-width: 360px;
-height: 640px;
-
-background: #1F0E88;
-box-shadow: inset 0px 4px 75px 63px rgba(0, 0, 0, 0.25);
-
-
-/* Group 8 */
-
-position: absolute;
-width: 284px;
-height: 51px;
-left: 31px;
-top: 25px;
-
-
-
-/* Group 6 */
-
-position: absolute;
-width: 284px;
-height: 51px;
-left: 31px;
-top: 25px;
-
-
-
-/* Rectangle 1 */
-
-position: absolute;
-width: 284px;
-height: 51px;
-left: 31px;
-top: 25px;
-
-background: #000000;
-box-shadow: 0px 2px 22px #FFFFFF;
-border-radius: 25px;
-
-
-/* search */
-
-position: absolute;
-width: 251px;
-height: 28px;
-left: 45px;
-top: 35px;
-
-font-family: Julius Sans One;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 26px;
-text-align: center;
-
-color: #FFFFFF;
-
-border: 1px solid #350E88;
-
-
-/* Group 1 */
+div{
 
 position: absolute;
 width: 360px;
@@ -83,26 +20,6 @@ left: 0px;
 top: 502px;
 
 background: #000000;
-
-
-/* SONGNAME */
-
-position: absolute;
-width: 222px;
-height: 39px;
-left: 73px;
-top: 510px;
-
-font-family: Julius Sans One;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 39px;
-text-align: center;
-
-color: #FFFFFF;
-
-border: 1px solid #350E88;
 
 
 /* Rectangle 16 */
@@ -137,9 +54,27 @@ top: 593px;
 
 background: #000000;
 
+}
+.songName{
 
-/* Rectangle 19 */
+position: absolute;
+width: 222px;
+height: 39px;
+left: 73px;
+top: 510px;
 
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 39px;
+text-align: center;
+
+color: #FFFFFF;
+
+border: 1px solid #350E88;
+}
+/* Rectangle 19
 position: absolute;
 width: 70px;
 height: 37px;
@@ -149,7 +84,7 @@ top: 593px;
 background: #000000;
 
 
-/* playlists */
+/* playlists 
 
 position: absolute;
 width: 74px;
@@ -169,7 +104,7 @@ color: #FFFFFF;
 border: 1px solid #350E88;
 
 
-/* QUEUE */
+/* QUEUE 
 
 position: absolute;
 width: 74px;
@@ -189,7 +124,7 @@ color: #FFFFFF;
 border: 1px solid #350E88;
 
 
-/* Random */
+/* Random 
 
 position: absolute;
 width: 74px;
@@ -209,7 +144,7 @@ color: #FFFFFF;
 border: 1px solid #350E88;
 
 
-/* Line 2 */
+/* Line 2
 
 position: absolute;
 width: 360px;
@@ -220,7 +155,7 @@ top: 580px;
 border: 1px solid #000000;
 
 
-/* Polygon 2 */
+/* Polygon 2 
 
 position: absolute;
 width: 27.81px;
@@ -234,7 +169,7 @@ box-sizing: border-box;
 transform: matrix(0, 1, -1, 0, 0, 0);
 
 
-/* Polygon 3 */
+/* Polygon 3 
 
 position: absolute;
 width: 27.81px;
@@ -248,7 +183,7 @@ box-sizing: border-box;
 transform: matrix(0, 1, -1, 0, 0, 0);
 
 
-/* Polygon 5 */
+/* Polygon 5 
 
 position: absolute;
 width: 27.87px;
@@ -262,7 +197,7 @@ box-sizing: border-box;
 transform: matrix(-0.08, -0.99, 1, -0.03, 0, 0);
 
 
-/* Polygon 4 */
+/* Polygon 4 
 
 position: absolute;
 width: 27.81px;
@@ -276,7 +211,7 @@ box-sizing: border-box;
 transform: matrix(0, 1, -1, 0, 0, 0);
 
 
-/* Polygon 6 */
+/* Polygon 6 
 
 position: absolute;
 width: 27.87px;
