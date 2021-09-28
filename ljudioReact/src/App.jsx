@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import Start from "./components/Start"
+import BigPlayer from "./components/BigPlayer"
 import './App.css'
+import './BigPlayer.css'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,8 +12,9 @@ function App() {
     <div className="baseDiv">
 
       <Start />
+      <BigPlayer />
     </div>
-      
+
   )
 }
 
