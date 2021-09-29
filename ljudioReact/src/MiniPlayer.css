@@ -1,62 +1,9 @@
 
 
-/*div{
-
-position: absolute;
-width: 360px;
-height: 138px;
-left: 0px;
-top: 502px;
-
-filter: drop-shadow(2px -2px 28px #FFFFFF);
-
-*/
-/* Rectangle 2 */
-
-/* Rectangle 16 
-
-position: absolute;
-width: 360px;
-height: 60px;
-left: 0px;
-top: 580px;
-
-background: #000000;
-
-
-/* Rectangle 17 
-
-position: absolute;
-width: 70px;
-height: 37px;
-left: 26px;
-top: 593px;
-
-background: #000000;
-
-
-/* Rectangle 18 
-
-position: absolute;
-width: 70px;
-height: 37px;
-left: 145px;
-top: 593px;
-
-background: #000000;
-
-}*/
-.songName{
- 
-
-/* SONGNAME*/ 
-
-position: absolute;
-width: 222px;
-height: 39px;
-left: 73px;
-top: 510px;
-
+p.songName{
+position:absolute;
+left: 45%;
+margin-top:-39px;
 font-family:'Julius Sans One', sans-serif;
 font-style: normal;
 font-weight: normal;
@@ -71,25 +18,28 @@ background: #000000;
 -webkit-text-stroke-color: #350E88;
 
 }
-
-.prevBtns{
-  margin-top:50%;
-margin-left:27%;
-border:10px;
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: #350E88;
+.playItems{
+display:flex;
+gap:4%;
+margin-top:45%;
+text-align: center;
+margin-left:45%;
+box-sizing: border-box;
 background: #000000;
 
-}
-.nextBtns{
-margin-top:-55px;
-margin-left:40%;
+/*box-shadow: 0px 24px 3px -24px black;*/
 -webkit-text-stroke-width: 1px;
 -webkit-text-stroke-color: #350E88;
 }
-.playBtn{
-  margin-top:-20px;
-margin-left:35%;
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: #350E88;
+div.songName .playItems{
+margin-left:10%;
 }
+/*.playItems::before{
+content:"";
+border:10px;
+width:165px;
+height:10px;
+background: #000000;
+}
+*/
+

@@ -2,7 +2,7 @@
 import '/src/MiniPlayer.css'
 function MiniPlayer() {
   return (
-    <div>
+    <div className="playItems">
 
         <p className="songName">Songname</p>
        
@@ -27,7 +27,7 @@ function MiniPlayer() {
           <path d="M0.525107 1.29047L22.9854 12.4943L0.617789 23.7577L0.525107 1.29047Z" fill="white" stroke="#350E88" />
             </svg>
             </div>
-    
+  
   
      
   </div>
