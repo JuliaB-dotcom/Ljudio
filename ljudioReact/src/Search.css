@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.searchBar{
+display:inline-block;
+}
+
+.inputField{
+position: absolute;
+margin-left: 15%;
+margin-top: 5%;
+width: 70%;
+height: 7%;
+background: #000000;
+box-shadow: 0px 2px 22px #FFFFFF;
+border-radius: 25px;
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 26px;
+text-align: center;
+color: #FFFFFF;
+border: 1px solid #350E88;
+
+}
+
+.searchResultsDiv{
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  margin-left: 15%;
+  top: 13%;
+  width: 70%;
+  height: 42%;
+}
+
+.addToButtons{
+/* border: 1px solid green;  */
+width: 100%;
+margin-top: 2%;
+/* top: 17%;
+right: 20%; */
+position: relative;
+}
+
+.addToButtons a{
+margin-left: 4%;
+color: white;
+text-decoration: none;
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 20px;
+}
+
+.addToButtons button{
+border-radius: 5px;
+margin-top: 2%;
+margin-left: 9%;
+background: black;
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+border: 1px dotted #670994;
+color: white;
+-webkit-text-stroke: 0.3px #670994;
+}
+
+.queueButton{
+margin-right: 15%;
+}
