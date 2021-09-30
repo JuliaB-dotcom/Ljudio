@@ -1,5 +1,5 @@
 import '/src/Start.css'
-
+import Start from './Start'
 function Start() {
 
   return (
