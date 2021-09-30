@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 .shuffle{
-  /* shuffle */
 
-position: absolute;
 width: 74px;
 height: 63px;
 left: 10px;
@@ -30,9 +28,6 @@ button{
 
 .loop{
 
-  /* loop */
-
-position: absolute;
 width: 48px;
 height: 31px;
 left: 291px;
@@ -51,101 +46,57 @@ border: 0px transparent solid;
 
 }
 
-.previous{
-  /* Group 4 */
-
-position: absolute;
-width: 55.36px;
-height: 44.98px;
-left: 96px;
-top: 486.02px;
-
-filter: drop-shadow(0px -3px 32px #0CEB15);
-box-shadow: 0px -3px 32px #0CEB15;
-
-
-/* Polygon 5 */
-
-position: absolute;
-width: 43.18px;
-height: 35.35px;
-left: 116.03px;
-top: 530.38px;
-
-background: #FFFFFF;
-
-
-
-/* Polygon 6 */
-
-position: absolute;
-width: 43.18px;
-height: 35.35px;
-left: 98.39px;
-top: 531px;
-
-background: #FFFFFF;
-
-
+button{
+  background-color: transparent;
+  border: transparent;
 }
 
-.play{
-
-  /* Polygon 7 */
-
-/* position: absolute; */
-width: 43.16px;
-height: 50.76px;
-left: 209.67px;
-top: 486.88px;
-
-background:transparent;
-box-shadow: 0px -3px 32px #0CEB15;
-
-
-}
-
-.next{
-
-  /* Group 5 */
-
-position: absolute;
-width: 50.91px;
-height: 44.13px;
-left: 214.09px;
-top: 486px;
-
-
-
-/* Polygon 3 */
-
-position: absolute;
-width: 43.16px;
-height: 35.36px;
-left: 249.44px;
-top: 486.91px;
-
-background: #FFFFFF;
-
-
-
-/* Polygon 4 */
-
-position: absolute;
-width: 43.16px;
-height: 35.36px;
-left: 264.9px;
-top: 486px;
-
-background: #FFFFFF;
-
-box-shadow: 0px -3px 32px #0CEB15;
-
-
-}
 
 .video{
 margin-left: 20%;
 margin: 20%;
-  align-items: center;
+
+filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.70));
+size: ;
+
+}
+
+.play{
+  background: url("./image/playbuttonround.png");
+  background-size: 100%;
+ 
+  border: 0;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  top: 80%;
+  left: 25%;
+}
+
+.previous{
+  background: url("./image/previousbutton.png");
+  background-size: 100%;
+  position: absolute;
+  border: 0;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  top: 80%;
+  left: 25%;
+  background-repeat: no-repeat;
+}
+
+.next{
+  
+  background: url("./image/nextbutton.png");
+  background-size: 100%;
+
+  border: 0;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  top: 80%;
+  left: 25%;
+  background-repeat: no-repeat;
+
 }
