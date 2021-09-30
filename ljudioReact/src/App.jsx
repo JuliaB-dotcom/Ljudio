@@ -2,7 +2,7 @@ import { useState } from 'react'
 // import Start from "./components/Start"
 //import MiniPlayer from './components/MiniPlayer'
 //import Search from "./components/Search"
-import Intro from './components/Intro'
+//import Intro from './components/Intro'
 import './App.css'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       {/*<Search />*/}
       {/*<MiniPlayer />*/}
       {/* <Start /> */}
-      <Intro/>
+      {/* <Intro/> */}
     </div>
 
   )

@@ -1,18 +1,14 @@
-import '/src/Start.css'
-import Start from './Start'
+import MiniPlayer from "./MiniPlayer"
+import Search from './Search'
 function Start() {
   
   return (
     <div>
-      <div>
-      <h1 className="title">Ljudio</h1>
-      <h1 className="title2">Ljudio</h1>
-     </div>
-    
-      <Start />
+      
+      <MiniPlayer />
+        <Search />
+  
     </div>
-   
   )
 }
-
 export default Start

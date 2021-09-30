@@ -1,15 +1,18 @@
-import MiniPlayer from "./MiniPlayer"
-import Search from './Search'
+import '/src/Intro.css'
+//import Start from './Start'
 function Intro() {
   
   return (
     <div>
-      
-      <MiniPlayer />
-      <div className="search">
-        <Search />
-      </div>
+      <div>
+      <h1 className="title">Ljudio</h1>
+      <h1 className="title2">Ljudio</h1>
+     </div>
+    
+      {/* <Start /> */}
     </div>
+   
   )
 }
+
 export default Intro
