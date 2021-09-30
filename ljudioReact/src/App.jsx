@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // import Start from "./components/Start"
-import BigPlayer from "./components/BigPlayer"
+// import BigPlayer from "./components/BigPlayer"
 // import Search from "./components/Search"
 //import MiniPlayer from './components/MiniPlayer'
 //import Search from "./components/Search"
@@ -16,7 +16,7 @@ function App() {
     <div className="baseDiv">
 
       {/* <Start /> */}
-      <BigPlayer />
+      {/* <BigPlayer /> */}
       {/*<Search />*/}
       {/*<MiniPlayer />*/}
       {/* <Start /> */}
