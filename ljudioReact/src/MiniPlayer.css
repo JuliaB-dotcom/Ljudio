@@ -19,6 +19,7 @@ background: #000000;*/
 
 }
 .playItems{
+
 display:flex;
 gap:4%;
 margin-top:45%;
@@ -33,6 +34,9 @@ background: #000000;*/
 }
 div.songName .playItems{
 margin-left:10%;
+}
+svg{
+  cursor:pointer;
 }
 
 /*.playItems::after{
