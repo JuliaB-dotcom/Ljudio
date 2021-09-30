@@ -35,3 +35,15 @@ color: rgba(255, 255, 255, 0.29);
 text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.34);
 transform: matrix(1, 0, 0, -1, 0, 0);
 }
+
+.play{
+    background: url("./image/playbtn.png");
+    background-size: 100%;
+    position: absolute;
+    border: 0;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    top: 80%;
+    left: 25%;
+}
