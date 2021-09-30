@@ -1,5 +1,5 @@
 import '/src/Start.css'
-import MiniPlayer from './MiniPlayer'
+import Start from './Start'
 function Start() {
   
   return (
@@ -9,7 +9,7 @@ function Start() {
       <h1 className="title2">Ljudio</h1>
      </div>
     
-      <MiniPlayer />
+      <Start />
     </div>
    
   )
