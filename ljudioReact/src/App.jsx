@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="baseDiv">
 
-      <Start />
+      {/* <Start /> */}
       <BigPlayer />
     </div>
 
