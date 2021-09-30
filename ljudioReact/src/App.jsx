@@ -2,6 +2,8 @@ import { useState } from 'react'
 // import Start from "./components/Start"
 import Search from "./components/Search"
 import './App.css'
+import './BigPlayer.css'
+
 
 function App() {
   const [count, setCount] = useState(0)

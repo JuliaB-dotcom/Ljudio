@@ -1,7 +1,7 @@
 
 
 p.songName{
-position:absolute;
+position:relative;
 left: 45%;
 margin-top:-39px;
 font-family:'Julius Sans One', sans-serif;
@@ -19,7 +19,7 @@ background: #000000;*/
 
 }
 .playItems{
-
+position:relative;
 display:flex;
 gap:4%;
 margin-top:45%;
