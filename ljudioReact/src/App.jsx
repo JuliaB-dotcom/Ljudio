@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Start from "./components/Start"
+// import Start from "./components/Start"
 import BigPlayer from "./components/BigPlayer"
 // import Search from "./components/Search"
 import './App.css'
