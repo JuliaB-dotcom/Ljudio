@@ -5,9 +5,9 @@ import { useState } from 'react'
 //import MiniPlayer from './components/MiniPlayer'
 // import Search from "./components/Search"
 //import Intro from './components/Intro'
-import Queue from './components/Queue'
+// import Queue from './components/Queue'
 import './App.css'
-import './BigPlayer.css'
+
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
       {/*<MiniPlayer />*/}
       {/* <Start /> */}
       {/* <Intro/> */}
-      <Queue />
+      {/* <Queue /> */}
     </div>
 
   )
