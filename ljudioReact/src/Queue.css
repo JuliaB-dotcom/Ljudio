@@ -1,1 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.queueDiv{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+
+}
+
+.queueMain{
+  
+ display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+min-width: 289px;
+min-height: 354px;
+
+
+background: rgba(0, 0, 0, 0.53);
+border-radius: 11px;
+
+
+}
+.queueName{
+
+
+color: red;
+
+}

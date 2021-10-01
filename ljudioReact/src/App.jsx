@@ -3,8 +3,9 @@ import { useState } from 'react'
 // import BigPlayer from "./components/BigPlayer"
 // import Search from "./components/Search"
 //import MiniPlayer from './components/MiniPlayer'
-//import Search from "./components/Search"
+// import Search from "./components/Search"
 //import Intro from './components/Intro'
+import Queue from './components/Queue'
 import './App.css'
 import './BigPlayer.css'
 
@@ -17,10 +18,11 @@ function App() {
 
       {/* <Start /> */}
       {/* <BigPlayer /> */}
-      {/*<Search />*/}
+      {/* <Search /> */}
       {/*<MiniPlayer />*/}
       {/* <Start /> */}
       {/* <Intro/> */}
+      <Queue />
     </div>
 
   )
