@@ -5,8 +5,9 @@ function MiniPlayer() {
     <div>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div className="parent">
+        <div className="songDiv">
         <h1 className="songName">Songname</h1>
-        
+        </div>
       <div className="playItems">
       <button className="prevButt" onclick="{}"></button>
       <button className="playButt" onclick="{}"></button>
