@@ -1,0 +1,38 @@
+/* ownPlaylist */
+.playlistDiv{
+position: absolute;
+width: 289px;
+height: 470px;
+left: 28px;
+top: 93px;
+
+/* Rectangle 20 */
+
+position: absolute;
+width: 289px;
+height: 470px;
+left: 28px;
+top: 93px;
+
+background: rgba(0, 0, 0, 0.53);
+border-radius: 14px;
+}
+
+/* playlist name */
+.playlistDiv .playlistName{
+position: relative;
+width: 219px;
+height: 32px;
+left: 71px;
+top: 95px;
+}
+.playlistName{
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 26px;
+text-align: center;
+
+color: #FFFFFF;
+}
