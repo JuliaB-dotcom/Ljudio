@@ -1,9 +1,9 @@
 /* ownPlaylist */
 .playlistDiv{
 position: absolute;
-width: 289px;
-height: 470px;
-left: 28px;
+width: 75%;
+height: 60%;
+left: 12%;
 top: 93px;
 
 background: rgba(0, 0, 0, 0.53);
@@ -15,50 +15,41 @@ button{
 }
 
 /* playlist name */
-.playlistNameBtn{
+.playlistNameDiv{
 position: relative;
 width: 219px;
 height: 32px;
-left: 71px;
-top: 95px;
+left: 33%;
+top: 3%;
 }
-.playlistName button{
+.playlistNameDiv button{
 font-family: Julius Sans One;
 font-style: normal;
 font-weight: normal;
 font-size: 24px;
 line-height: 26px;
 text-align: center;
-
+background:none;
+border:none;
 color: #FFFFFF;
 }
 
 
 .saveBtnDiv{
 /* Rectangle 8 */
-
-position: absolute;
-width: 75px;
-height: 26px;
-left: 227px;
-top: 96px;
+display:flex;
+position: relative;
+width: 60px;
+height: 29px;
+left: 80%;
+top: -9%;
 
 background: rgba(0, 0, 0, 0.75);
 border: 1px solid #000000;
 box-sizing: border-box;
 }
 
-.saveBtn{
-  
-/* SAVE */
-
-position: relative;
-width: 109px;
-height: 34px;
-left: 215px;
-top: 96px;
-}
-.saveBtn button{
+.saveBtnDiv button{
 font-family: Julius Sans One;
 font-style: normal;
 font-weight: normal;
@@ -66,9 +57,27 @@ font-size: 24px;
 line-height: 26px;
 text-align: center;
 
+
 color: #FFFFFF;
 
-border: 1px solid #670994;
-text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.37);
 
+-webkit-text-stroke-width: 0.3px;
+-webkit-text-stroke-color: #670994;
+text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.37);
+background: rgba(0, 0, 0, 0.75);
+border: 1px solid #000000;
+box-sizing: border-box;
+
+}
+.changeBtns1 button,.changeBtns2 button{
+  color:white;
+  background:none;
+  border:none;
+  font-size: 2.2rem;
+}
+
+.changeBtns1,.changeBtns2{
+  display:flex;
+  gap:2%;
+  
 }

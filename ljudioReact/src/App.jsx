@@ -7,6 +7,7 @@ import { useState } from 'react'
 //import Intro from './components/Intro'
 // import Queue from './components/Queue'
 // import Playlist from "./components/Playlist"
+import OwnPlaylist from "./components/OwnPlaylist"
 import './App.css'
 
 
@@ -25,6 +26,7 @@ function App() {
       {/* <Intro/> */}
       {/* <Queue /> */}
       {/* <Playlist /> */}
+      <OwnPlaylist />
     </div>
 
   )
