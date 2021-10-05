@@ -24,7 +24,7 @@ function Search() {
 
       <div className="parentTwo">
 
-        <div className="newSongDiv">
+        {/* <div className="newSongDiv">
           <div className="childTwo-1">
             <a href="#">This is the greatest song</a>
           </div>
@@ -35,7 +35,7 @@ function Search() {
           </div>
         </div>
 
-
+      
         <div className="newSongDiv">
           <div className="childTwo-1">
             <a href="#">Wow what a song this is</a>
@@ -47,7 +47,7 @@ function Search() {
           </div>
         </div>
 
-
+      
         <div className="newSongDiv">
           <div className="childTwo-1">
             <a href="#">Sing along to my song</a>
@@ -60,7 +60,7 @@ function Search() {
         </div>
 
 
-
+      
         <div className="newSongDiv">
           <div className="childTwo-1">
             <a href="#">No ideas at all song</a>
@@ -73,7 +73,7 @@ function Search() {
         </div>
 
 
-
+      
         <div className="newSongDiv">
           <div className="childTwo-1">
             <a href="#">lorem ipsum song wow</a>
@@ -86,7 +86,7 @@ function Search() {
         </div>
 
 
-
+      
         <div className="newSongDiv">
           <div className="childTwo-1">
             <a href="#">crazy frog song is great</a>
@@ -96,7 +96,7 @@ function Search() {
             <button className="queueButton">Queue</button>
             <button className="playlistButton">Playlist</button>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </div>

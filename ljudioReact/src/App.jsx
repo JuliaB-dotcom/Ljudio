@@ -1,26 +1,81 @@
-import { useState } from 'react'
-// import Start from "./components/Start"
-// import BigPlayer from "./components/BigPlayer"
+import { useContext } from 'react'
+import { PlayerContext } from './contexts/PlayerContexts'
+import Start from "./components/Start"
+import BigPlayer from "./pages/BigPlayer"
 import Search from "./components/Search"
 import MiniPlayer from './components/MiniPlayer'
 //import Intro from './components/Intro'
-// import Queue from './components/Queue'
-// import Playlist from "./components/Playlist"
-// import OwnPlaylist from "./components/OwnPlaylist"
+import Queue from './pages/Queue'
+import Playlist from "./pages/Playlist"
+import OwnPlaylist from "./pages/OwnPlaylist"
 import './App.css'
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [context, updateContext] = useContext(PlayerContext)
 
   return (
     <div className="baseDiv">
+      <Router>
+        <nav>
+          <Link to="/">Start</Link>
+          {' | '}
+          <Link to="/about">Bigplayer</Link>
+          {' | '}
+          <Link to="/product">OwnPlaylist</Link>
+        </nav>
 
+        <main>
+          <Route path="/" exact component={Start} />
+          <Route path="/about" exact component={BigPlayer} />
+          <Route path="/product" exact component={OwnPlaylist} />
+          <Route path="/product/:videoId" exact component={Queue} />
+        </main>
+
+        {/* update current song whenever the videoId changes */}
+        {/* <Player /> */}
+
+        {/* <Progressbar /> */}
+
+        {/* <div>
+          <input
+            type="text"
+            placeholder="search songs"
+            onChange={e => setInput(e.target.value)}
+          />
+          <button onClick={searchSong}>Search</button>
+          <hr />
+
+          {songs && songs.map(song => (
+            <div key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
+          ))}
+        </div> */}
+      </Router>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* 
+      <MiniPlayer /> */}
+      {/* <Search /> */}
       {/* <Start /> */}
       {/* <BigPlayer /> */}
-      <Search />
-      <MiniPlayer />
+      {/* <Start /> */}
       {/* <Start /> */}
       {/* <Intro/> */}
       {/* <Queue /> */}
