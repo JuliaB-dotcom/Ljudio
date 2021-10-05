@@ -5,7 +5,7 @@ function MiniPlayer() {
     <div className="parent">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <div className="songDiv">
+      <div className="songDiv123">
         <h1 className="songName">Songname</h1>
       </div>
       <div className="playItems">
@@ -16,7 +16,7 @@ function MiniPlayer() {
 
       <div className="textButtons">
         <button className="playlist" onclick="{}">PLAYLIST</button>
-        <button className="playlist" onclick="{}">Queu</button>
+        <button className="playlist" onclick="{}">Queue</button>
         <button className="playlist" onclick="{}">RANDOM</button>
       </div>
     </div>
