@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useState, useContext } from 'react'
 import { PlayerContext } from './contexts/PlayerContexts'
 import Start from "./components/Start"
 import BigPlayer from "./pages/BigPlayer"
@@ -9,6 +9,7 @@ import Queue from './pages/Queue'
 import Playlist from "./pages/Playlist"
 import OwnPlaylist from "./pages/OwnPlaylist"
 import './CSS/App.css'
+// import Progressbar from './pages/Progressbar'
 
 import {
   BrowserRouter as Router,
@@ -19,7 +20,24 @@ import {
 
 function App() {
   const [context, updateContext] = useContext(PlayerContext)
+  const [input, setInput] = useState('')
+  const [songs, setSongs] = useState()
+  const [currentVideoId, setCurrentVideoId] = useState()
 
+
+  async function searchSong() {
+    let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/songs/' + input)
+    let result = await response.json()
+    console.log(result.content)
+    setSongs(result.content)
+  }
+
+  function songClick(song) {
+    console.log(song.name);
+    setCurrentVideoId(song.videoId)
+
+    context.player.loadVideoById(song.videoId)
+  }
   return (
     <div className="baseDiv">
       <Router>
@@ -36,6 +54,7 @@ function App() {
           <Route path="/queue" exact component={Queue} />
           <Route path="/bigplayer" exact component={BigPlayer} />
           <Route path="/playlist" exact component={Playlist} />
+          {/* <Progressbar /> */}
         </main>
 
         {/* update current song whenever the videoId changes */}
