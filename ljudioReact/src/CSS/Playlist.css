@@ -1,5 +1,7 @@
 .playlistDiv{
   position: absolute;
+  display: flex;
+  flex-direction: column;
   width: 96%;
   height: 48%;
   left: 2%;
@@ -7,8 +9,6 @@
 
   background: rgba(0, 0, 0, 0.53);
 
-  display: flex;
-flex-direction: column;
 }
 .playlist{
 
