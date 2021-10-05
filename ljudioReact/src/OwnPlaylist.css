@@ -1,11 +1,12 @@
 /* ownPlaylist */
 .playlistDiv{
 position: absolute;
-width: 75%;
+width: 80%;
 height: 60%;
-left: 12%;
+left: 9%;
 top: 93px;
-
+max-width:65;
+min-width: 65%;
 background: rgba(0, 0, 0, 0.53);
 border-radius: 14px;
 }
@@ -19,14 +20,17 @@ button{
 position: relative;
 width: 219px;
 height: 32px;
-left: 33%;
+max-width:65;
+min-width: 65%;
+left: 25%;
 top: 3%;
+
 }
 .playlistNameDiv button{
 font-family: Julius Sans One;
 font-style: normal;
 font-weight: normal;
-font-size: 24px;
+font-size: 20px;
 line-height: 26px;
 text-align: center;
 background:none;
@@ -41,8 +45,8 @@ display:flex;
 position: relative;
 width: 60px;
 height: 29px;
-left: 80%;
-top: -9%;
+left: 78%;
+top: -6%;
 
 background: rgba(0, 0, 0, 0.75);
 border: 1px solid #000000;
@@ -53,8 +57,8 @@ box-sizing: border-box;
 font-family: Julius Sans One;
 font-style: normal;
 font-weight: normal;
-font-size: 24px;
-line-height: 26px;
+font-size: 18px;
+line-height: 25px;
 text-align: center;
 
 
@@ -69,15 +73,56 @@ border: 1px solid #000000;
 box-sizing: border-box;
 
 }
+.songDiv1{
+  
+  position:relative;
+  top:-6%;
+  left:10%;
+  max-width:65;
+  min-width: 65%;
+}
+.songDiv2{
+  position:relative;
+  top:-7%;
+  left:10%;
+  max-width:65;
+  min-width: 65%;
+}
+.songDiv1 p,.songDiv2 p{
+  color:white;
+  font-size: 1.2rem;
+}
 .changeBtns1 button,.changeBtns2 button{
   color:white;
   background:none;
   border:none;
-  font-size: 2.2rem;
+}
+.queueSong{
+  position:relative;
+ font-size: 1.6rem;
+ 
+}
+.removeSong{
+  position:relative;
+  font-size: 1.4rem;
+
 }
 
-.changeBtns1,.changeBtns2{
+.changeBtns1{
   display:flex;
+  position:relative;
   gap:2%;
-  
+  top:-19.7%;
+  left:80%;
+  max-width:65;
+  min-width: 65%;
+}
+.changeBtns2{
+  display:flex;
+  position:relative;
+  gap:2%;
+  top:-19.7%;
+  left:80%;
+  max-width:65;
+  min-width: 65%;
 }
