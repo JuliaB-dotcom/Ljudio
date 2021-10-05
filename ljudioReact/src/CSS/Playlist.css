@@ -6,6 +6,9 @@
   top: 30%;
 
   background: rgba(0, 0, 0, 0.53);
+
+  display: flex;
+flex-direction: column;
 }
 .playlist{
 
@@ -26,6 +29,7 @@
   position: relative;
   left: 1%;
   top: -18%;
+  margin-bottom: 7%;
 }
 button{
   cursor:pointer;
