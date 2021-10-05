@@ -57,7 +57,7 @@ background-color: transparent;
 }
 
 .parent{
-position: absolute;
+position: fixed;
 width: 100%;
 height: fit-content;
 bottom: 0;
@@ -67,6 +67,7 @@ z-index: 100;
 background: #000000;
 box-shadow: 0px -14px 47px #FFFFFF;
 border-top: 1px solid #350E88;
+
 }
 .playItems{
 
