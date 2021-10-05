@@ -1,4 +1,4 @@
-import '/src/BigPlayer.css'
+import '/src/CSS/BigPlayer.css'
 
 function BigPlayer() {
 

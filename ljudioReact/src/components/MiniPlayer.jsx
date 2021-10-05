@@ -1,5 +1,5 @@
 
-import '/src/MiniPlayer.css'
+import '/src/CSS/MiniPlayer.css'
 import { useHistory } from "react-router-dom"
 function MiniPlayer() {
   let history = useHistory();

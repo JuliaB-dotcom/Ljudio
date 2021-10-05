@@ -76,7 +76,7 @@ border-top: 1px solid #350E88;
 
 }
 .prevButt{
-  background: url("./image/previousbutton.png");
+  background: url("/src/image/previousbutton.png");
  background-repeat: no-repeat;
 background-size: 100%;
 
@@ -87,7 +87,7 @@ order:1;
 border: 0;
 }
 .nextButt{
-background: url("./image/nextbutton.png");
+background: url("/src/image/nextbutton.png");
  background-repeat: no-repeat;
 background-size: 100%;
 
@@ -98,7 +98,7 @@ order: 3;
 border: 0;
 }
 .playButt{
-  background: url("./image/playbuttonround.png");
+  background: url("/src/image/playbuttonround.png");
  background-repeat: no-repeat;
 background-size: 100%;
 ;

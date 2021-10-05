@@ -1,6 +1,6 @@
 
 
-import "/src/Playlist.css"
+import "/src/CSS/Playlist.css"
 function Playlist() {
 
   return (

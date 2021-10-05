@@ -8,7 +8,7 @@ import MiniPlayer from './components/MiniPlayer'
 import Queue from './pages/Queue'
 import Playlist from "./pages/Playlist"
 import OwnPlaylist from "./pages/OwnPlaylist"
-import './App.css'
+import './CSS/App.css'
 
 import {
   BrowserRouter as Router,
