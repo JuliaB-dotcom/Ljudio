@@ -88,3 +88,19 @@
   color: white;
   -webkit-text-stroke: 0.3px #670994;
 }
+.backDiv{
+  top:20%;
+  left:10%;
+}
+.backBtn{
+  background: url("/src/image/back.png");
+ background-repeat: no-repeat;
+background-size: 100%;
+;
+
+width: 70px;
+
+height: 70px;
+
+border: 0;
+}
