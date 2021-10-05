@@ -3,7 +3,8 @@ import { useState } from 'react'
 // import BigPlayer from "./components/BigPlayer"
 // import Search from "./components/Search"
 //import MiniPlayer from './components/MiniPlayer'
-// import Search from "./components/Search"
+import Search from "./components/Search"
+import ArtistPage from './components/ArtistPage'
 //import Intro from './components/Intro'
 // import Queue from './components/Queue'
 // import Playlist from "./components/Playlist"
@@ -19,7 +20,8 @@ function App() {
 
       {/* <Start /> */}
       {/* <BigPlayer /> */}
-      {/* <Search /> */}
+      <Search />
+      <ArtistPage />
       {/*<MiniPlayer />*/}
       {/* <Start /> */}
       {/* <Intro/> */}

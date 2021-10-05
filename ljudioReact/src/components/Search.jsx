@@ -22,9 +22,9 @@ function Search() {
         <div className="childOne-1">
           <input type="text" className="inputField" placeholder="Search" />
         </div>
-
+        {/*
         <div className="parentTwo">
-          {/* Song one */}
+          //  Song one 
           <div className="newSongDiv">
             <div className="childTwo-1">
               <a href="#">This is the greatest song</a>
@@ -36,7 +36,7 @@ function Search() {
             </div>
           </div>
 
-          {/* Song two */}
+          // Song two 
           <div className="newSongDiv">
             <div className="childTwo-1">
               <a href="#">Wow what a song this is</a>
@@ -48,7 +48,7 @@ function Search() {
             </div>
           </div>
 
-          {/* Song three */}
+          // Song three 
           <div className="newSongDiv">
             <div className="childTwo-1">
               <a href="#">Sing along to my song</a>
@@ -61,7 +61,7 @@ function Search() {
           </div>
 
 
-          {/* Song four */}
+          // Song four
           <div className="newSongDiv">
             <div className="childTwo-1">
               <a href="#">No ideas at all song</a>
@@ -74,7 +74,7 @@ function Search() {
           </div>
 
 
-          {/* Song five */}
+          // Song five
           <div className="newSongDiv">
             <div className="childTwo-1">
               <a href="#">lorem ipsum song wow</a>
@@ -87,7 +87,7 @@ function Search() {
           </div>
 
 
-          {/* Song six */}
+          // Song six 
           <div className="newSongDiv">
             <div className="childTwo-1">
               <a href="#">crazy frog song is great</a>
@@ -100,6 +100,7 @@ function Search() {
           </div>
 
         </div>
+      */}
       </div>
     </div>
   )
