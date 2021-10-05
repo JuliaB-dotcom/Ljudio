@@ -20,8 +20,9 @@ function Search() {
 
       <div className="childOne-1">
         <input type="text" className="inputField" placeholder="Search" />
+        <button className="backBtn"> </button>
       </div>
-
+      
       <div className="parentTwo">
 
         {/* <div className="newSongDiv">
