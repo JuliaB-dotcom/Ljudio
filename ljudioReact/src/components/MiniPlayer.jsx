@@ -4,9 +4,6 @@ import { useHistory } from "react-router-dom"
 function MiniPlayer() {
   let history = useHistory();
 
-  function redirectTo(theRoute) {
-    history.push('/' + theRoute)
-  }
   return (
     <div className="parent">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
