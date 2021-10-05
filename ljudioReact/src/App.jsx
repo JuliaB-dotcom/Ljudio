@@ -32,7 +32,7 @@ function App() {
         </nav> */}
 
         <main>
-          <Route path="/" exact component={Start} />
+          <Route path="/" component={Start} />
           <Route path="/queue" exact component={Queue} />
           <Route path="/bigplayer" exact component={BigPlayer} />
           <Route path="/playlist" exact component={Playlist} />

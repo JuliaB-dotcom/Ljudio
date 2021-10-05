@@ -10,11 +10,11 @@ function BigPlayer() {
       </div>
       <div className="btnDiv">
 
-        <button type="button" className="shuffle">shuffle</button>
+        {/* <button type="button" className="shuffle">shuffle</button>
         <button type="button" className="previous"></button>
         <button type="button" className="play"></button>
         <button type="button" className="next"></button>
-        <button type="button" className="loop">Loop</button>
+        <button type="button" className="loop">Loop</button> */}
       </div>
     </div>
   )
