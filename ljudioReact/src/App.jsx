@@ -23,19 +23,19 @@ function App() {
   return (
     <div className="baseDiv">
       <Router>
-        <nav>
+        {/* <nav>
           <Link to="/">Start</Link>
           {' | '}
           <Link to="/about">Bigplayer</Link>
           {' | '}
           <Link to="/product">OwnPlaylist</Link>
-        </nav>
+        </nav> */}
 
         <main>
           <Route path="/" exact component={Start} />
-          <Route path="/about" exact component={BigPlayer} />
-          <Route path="/product" exact component={OwnPlaylist} />
-          <Route path="/product/:videoId" exact component={Queue} />
+          <Route path="/queue" exact component={Queue} />
+          <Route path="/bigplayer" exact component={BigPlayer} />
+          <Route path="/playlist" exact component={Playlist} />
         </main>
 
         {/* update current song whenever the videoId changes */}
