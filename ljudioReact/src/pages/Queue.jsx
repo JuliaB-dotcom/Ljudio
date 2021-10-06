@@ -1,5 +1,5 @@
 import React from 'react'
-import '/src/Queue.css'
+import '/src/CSS/Queue.css'
 
 function Queue() {
   return (

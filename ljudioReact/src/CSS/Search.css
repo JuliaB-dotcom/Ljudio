@@ -88,3 +88,18 @@
   color: white;
   -webkit-text-stroke: 0.3px #670994;
 }
+.backBtn{
+  background: url("/src/image/backbutton.png");
+ background-repeat: no-repeat;
+background-size: 100%;
+cursor:pointer;
+;
+
+width: 75px;
+
+height: 70px;
+
+border: 0;
+margin-top:-10%;
+margin-left:82%;
+}
