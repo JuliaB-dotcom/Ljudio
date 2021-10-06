@@ -10,6 +10,7 @@ import Playlist from "./pages/Playlist"
 import OwnPlaylist from "./pages/OwnPlaylist"
 import './CSS/App.css'
 import ArtistPage from './components/ArtistPage'
+import Player from './components/Player'
 // import Progressbar from './pages/Progressbar'
 
 import {
@@ -49,7 +50,7 @@ function App() {
           {' | '}
           <Link to="/product">OwnPlaylist</Link>
         </nav> */}
-
+        <Player />
         <main>
           <Route path="/" component={Start} />
           <Route path="/queue" exact component={Queue} />
