@@ -1,0 +1,101 @@
+.OwnPlayListDiv{
+  position:relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  z-index: 10;
+  overflow: auto;
+}
+.playlistDiv1{
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  margin: 0% 20%;
+  min-width: 289px;
+  min-height: 20px;
+
+
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.30);
+  border-radius: 11px;
+  filter: drop-shadow(0px 4px 7px rgba(2, 2, 2, 0.911)); 
+ 
+}
+button{
+  cursor:pointer;
+  filter:none;
+
+  color: #FFFFFF;
+
+  background:none;
+  border:none;
+}
+
+.playlistNameDiv{
+
+  left:30%;
+  margin-top:15%;
+  margin-bottom:5%;
+  
+} 
+.playlistNameBtn {
+
+  font-family: Julius Sans One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  
+  filter: drop-shadow(0px 4px 7px rgb(12, 12, 12)); 
+
+}
+
+
+.saveBtnDiv{
+
+  display:flex;
+  position: absolute;
+  width: 60px;
+  height: 24px;
+  left: 45%;
+  top: 18%;
+
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.saveBtnDiv button{
+  font-family: Julius Sans One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: #670994;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.37);
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+
+}
+.songDiv1{
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  margin-top: 0.5%;
+  margin-bottom: 2%;
+  filter: drop-shadow(0px 4px 7px rgb(12, 12, 12)); 
+  border-bottom: black solid 1px;
+  flex-shrink: 1;
+}
+.queueSong{
+  margin-left:71%;
+  font-size: 1.9rem;
+}

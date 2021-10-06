@@ -4,7 +4,6 @@ function Start() {
 
   return (
     <div>
-
       <MiniPlayer />
       <Search />
 

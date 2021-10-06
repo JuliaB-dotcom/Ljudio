@@ -1,5 +1,5 @@
 import React from 'react'
-import '/src/Search.css'
+import '/src/CSS/Search.css'
 
 function Search() {
 
@@ -15,7 +15,7 @@ function Search() {
   }
 
   return (
-    <div>
+    <div className="parentOne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <div className="parentOne">
@@ -35,6 +35,12 @@ function Search() {
               <button className="playlistButton">Playlist</button>
             </div>
           </div>
+          <button onClick={showDiv}>+</button>
+          <div className="childTwo-2">
+            <button className="queueButton">Queue</button>
+            <button className="playlistButton">Playlist</button>
+          </div>
+        </div>
 
           // Song two 
           <div className="newSongDiv">
@@ -47,6 +53,12 @@ function Search() {
               <button className="playlistButton">Playlist</button>
             </div>
           </div>
+          <button onClick={showDiv}>+</button>
+          <div className="childTwo-2">
+            <button className="queueButton">Queue</button>
+            <button className="playlistButton">Playlist</button>
+          </div>
+        </div>
 
           // Song three 
           <div className="newSongDiv">
@@ -59,6 +71,7 @@ function Search() {
               <button className="playlistButton">Playlist</button>
             </div>
           </div>
+        </div>
 
 
           // Song four
@@ -72,6 +85,7 @@ function Search() {
               <button className="playlistButton">Playlist</button>
             </div>
           </div>
+        </div>
 
 
           // Song five
@@ -85,6 +99,7 @@ function Search() {
               <button className="playlistButton">Playlist</button>
             </div>
           </div>
+        </div>
 
 
           // Song six 
@@ -98,11 +113,12 @@ function Search() {
               <button className="playlistButton">Playlist</button>
             </div>
           </div>
+        </div> */}
 
-        </div>
-      */}
       </div>
+      */}
     </div>
+    </div >
   )
 }
 
