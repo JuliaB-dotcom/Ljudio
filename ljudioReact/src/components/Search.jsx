@@ -1,10 +1,17 @@
 import React from 'react'
 import { useState, useContext } from 'react'
+import BigPlayer from '../pages/BigPlayer'
+import { PlayerContext } from '/src/contexts/PlayerContexts'
+
 import '/src/CSS/Search.css'
 
 function Search() {
   const [input, setInput] = useState('')
   const [songs, setSongs] = useState()
+  const [currentVideoId, setCurrentVideoId] = useState()
+  const [context, updateContext] = useContext(PlayerContext)
+
+
   function showDiv() {
     let buttonsDiv = document.getElementsByClassName("childTwo-2");
     console.log(buttonsDiv[0].style);
@@ -23,6 +30,13 @@ function Search() {
     setSongs(result.content)
   }
 
+  function songClick(song) {
+    console.log(song.name);
+    setCurrentVideoId(song.videoId)
+
+    context.player.loadVideoById(song.videoId)
+  }
+
   return (
     <div className="parentOne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +49,9 @@ function Search() {
             <div key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
           ))}
         </div>
+        <BigPlayer />
         {/*
+        
         <div className="parentTwo">
           //  Song one 
           <div className="newSongDiv">
