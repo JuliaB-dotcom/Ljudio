@@ -113,11 +113,10 @@ function Search() {
               <button className="playlistButton">Playlist</button>
             </div>
           </div>
-        </div> */}
+        </div>
 
+       </div> */}
       </div>
-      */}
-    </div>
     </div >
   )
 }
