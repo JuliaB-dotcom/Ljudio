@@ -15,6 +15,22 @@ function ArtistPage() {
         <h1>Songs</h1>
         <button>Share</button>
       </div>
+      <div className="artistsSongs">
+        <p>Here goes all the songs</p>
+        <p>Here goes all the songs</p>
+        <p>Here goes all the songs</p>
+        <p>Here goes all the songs</p>
+      </div>
+      <h1 className="aboutH1">About</h1>
+      <div className="aboutTextDiv">
+        <p>
+          Lorem ipsum dolor sit amet,
+          consectetur blev fångad av en stormvind pharetra sodales.
+          Nunc at urna eget neque egestas finibus. Nulla.
+          consectetur blev fångad av en stormvind pharetra sodales.
+          Nunc at urna eget neque egestas finibus. Nulla.
+        </p>
+      </div>
     </div>
   )
 }

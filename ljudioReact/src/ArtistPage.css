@@ -1,5 +1,6 @@
 .artistPageMainDiv{
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  margin-top: 5%;
   width: 100%;
   height: fit-content;
   /* margin-top: 20%; */
@@ -14,8 +15,9 @@
   background: url("/src/image/testImage.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 75% 60%;
-  height: 300px;
+  background-size: 100% 100%;
+  height: 200px;
+  margin-bottom: 2%;
 }
 
 /* .artistImgAndName img{
@@ -44,9 +46,10 @@
 
 .songsDiv{
   /* position: relative; */
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   /* text-align: center; */
   display: flex;
+  height: 65px;
 }
 
 .songsDiv h1{
@@ -58,6 +61,7 @@ font-size: 25px;
 line-height: 39px;
 color: #FFFFFF;
 text-shadow: 0px 4px 7px #000000;
+margin-right: 35%;
 }
 
 .songsDiv button{
@@ -67,9 +71,11 @@ font-style: normal;
 font-weight: normal;
 font-size: 15px;
 line-height: 26px;
-background-color: rgba(0, 0, 0, 0.7);
+/* background-color: rgba(0, 0, 0, 0.7); */
+background-color: transparent;
 color: #FFFFFF;
-border: 1px solid #781863;
+border: 0;
+/* border: 1px solid #781863; */
 text-shadow: 0px 1px 2px #670994;
 }
 
@@ -82,3 +88,54 @@ text-shadow: 0px 1px 2px #670994;
   text-align: center;
   margin-top: 25%;
 } */
+
+.artistsSongs{
+  /* border: 1px solid gray; */
+  margin-left: 15%;
+  width: 60%;
+  height: fit-content;
+  padding: 1%;
+background: rgba(0, 0, 0, 0.53);
+}
+.artistsSongs p{
+  display: block;
+  /* Främling */
+font-family: Julius Sans One;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+}
+
+.aboutH1{
+  margin-bottom: 0;
+  font-family: Julius Sans One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;  
+  text-align: center;
+  color: #FFFFFF;
+
+
+}
+
+.aboutTextDiv{
+  /* border: 1px solid salmon; */
+  height: fit-content;
+  font-family: Julius Sans One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  margin-left: 15%;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.53);
+  width: 70%;
+}
