@@ -1,57 +1,56 @@
+
 .playlistDiv{
-  position: absolute;
+  position:absolute;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 96%;
+  width: 90%;
   height: 48%;
-  left: 2%;
+  left: 4%;
   top: 30%;
 
+  color: #FFFFFF;
   background: rgba(0, 0, 0, 0.53);
 
 }
-h1.playlist{
+.playlist{
 
   font-family: Julius Sans One;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
-  text-align: center;
-  text-align: center;
 
-  color: #FFFFFF;
+  
   filter: drop-shadow(0px 4px 7px rgb(12, 12, 12)); 
 }
 .playlistNameDiv1{
   max-width: 65%;
   min-width: 65%;
   display:flex;
-  position: relative;
   left: 0%;
-  margin-top: -6%;
-  margin-bottom: 7%;
+  margin-top: -37%;
+  margin-bottom: 6%;
 }
 button{
   cursor:pointer;
   filter:none;
 }
 .buttonsDiv {
-  position: relative;
+  
   display: flex;
   max-width: 65%;
   min-width: 65%;
 
-  top: 1%; 
-  left:23%;
+  margin-top:5%; 
+  margin-left:23%;
   flex-wrap: wrap;
   gap:8px;
-  
-  
+   
 }
 .buttonsDiv button{
 
-  color:white;
+  
   background: rgba(0, 0, 0, 0.45);
   border: 1px solid #000000;
   box-sizing: border-box;
