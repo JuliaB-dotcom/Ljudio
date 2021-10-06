@@ -6,7 +6,7 @@ function Playlist() {
   return (
     <div>
       <div className="playlistDiv">
-        <div className="playlistNameDiv">
+        <div className="playlistNameDiv1">
           <h1 className="playlist">PLAYLIST</h1>
         </div>
         <div className="buttonsDiv">
