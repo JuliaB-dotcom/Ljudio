@@ -27,6 +27,14 @@
   color: #FFFFFF;
   border: 1px solid #350E88;
 }
+.childOne-1 button{
+  background:url('/src/image/searchbutton.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+}
 
 
 
@@ -85,8 +93,8 @@
   line-height: 20px;
   text-align: center;
   border: 1px dotted #670994;
-  color: white;
-  -webkit-text-stroke: 0.3px #670994;
+  color: white; 
+ -webkit-text-stroke: 0.3px #670994;
 }
 .backBtn{
   background: url("/src/image/backbutton.png");
@@ -103,3 +111,14 @@ border: 0;
 margin-top:-10%;
 margin-left:82%;
 }
+
+
+/* .searchBtn{
+  background-size: 100%;
+
+  border: 0;
+  padding: 0;
+  position: absolute;
+  left: 25%;
+  background-repeat: no-repeat;
+} */

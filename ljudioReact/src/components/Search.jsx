@@ -1,8 +1,10 @@
 import React from 'react'
+import { useState, useContext } from 'react'
 import '/src/CSS/Search.css'
 
 function Search() {
-
+  const [input, setInput] = useState('')
+  const [songs, setSongs] = useState()
   function showDiv() {
     let buttonsDiv = document.getElementsByClassName("childTwo-2");
     console.log(buttonsDiv[0].style);
@@ -14,13 +16,24 @@ function Search() {
     }
   }
 
+  async function searchSong() {
+    let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/songs/' + input)
+    let result = await response.json()
+    console.log(result.content)
+    setSongs(result.content)
+  }
+
   return (
     <div className="parentOne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <div className="parentOne">
         <div className="childOne-1">
-          <input type="text" className="inputField" placeholder="Search" />
+          <input type="text" className="inputField" placeholder="Search" onChange={e => setInput(e.target.value)} />
+          <button className="searchBtn" onClick={searchSong}></button>
+          {songs && songs.map(song => (
+            <div key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
+          ))}
         </div>
         {/*
         <div className="parentTwo">
