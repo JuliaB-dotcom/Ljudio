@@ -18,89 +18,106 @@ function Search() {
     <div className="parentOne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <div className="childOne-1">
-        <input type="text" className="inputField" placeholder="Search" />
-        <button className="backBtn"> </button>
+      <div className="parentOne">
+        <div className="childOne-1">
+          <input type="text" className="inputField" placeholder="Search" />
+        </div>
+        {/*
+        <div className="parentTwo">
+          //  Song one 
+          <div className="newSongDiv">
+            <div className="childTwo-1">
+              <a href="#">This is the greatest song</a>
+            </div>
+            <button onClick={showDiv}>+</button>
+            <div className="childTwo-2">
+              <button className="queueButton">Queue</button>
+              <button className="playlistButton">Playlist</button>
+            </div>
+          </div>
+          <button onClick={showDiv}>+</button>
+          <div className="childTwo-2">
+            <button className="queueButton">Queue</button>
+            <button className="playlistButton">Playlist</button>
+          </div>
+        </div>
+
+          // Song two 
+          <div className="newSongDiv">
+            <div className="childTwo-1">
+              <a href="#">Wow what a song this is</a>
+            </div>
+            <button onClick={showDiv}>+</button>
+            <div className="childTwo-2">
+              <button className="queueButton">Queue</button>
+              <button className="playlistButton">Playlist</button>
+            </div>
+          </div>
+          <button onClick={showDiv}>+</button>
+          <div className="childTwo-2">
+            <button className="queueButton">Queue</button>
+            <button className="playlistButton">Playlist</button>
+          </div>
+        </div>
+
+          // Song three 
+          <div className="newSongDiv">
+            <div className="childTwo-1">
+              <a href="#">Sing along to my song</a>
+            </div>
+            <button onClick={showDiv}>+</button>
+            <div className="childTwo-2">
+              <button className="queueButton">Queue</button>
+              <button className="playlistButton">Playlist</button>
+            </div>
+          </div>
+        </div>
+
+
+          // Song four
+          <div className="newSongDiv">
+            <div className="childTwo-1">
+              <a href="#">No ideas at all song</a>
+            </div>
+            <button onClick={showDiv}>+</button>
+            <div className="childTwo-2">
+              <button className="queueButton">Queue</button>
+              <button className="playlistButton">Playlist</button>
+            </div>
+          </div>
+        </div>
+
+
+          // Song five
+          <div className="newSongDiv">
+            <div className="childTwo-1">
+              <a href="#">lorem ipsum song wow</a>
+            </div>
+            <button onClick={showDiv}>+</button>
+            <div className="childTwo-2">
+              <button className="queueButton">Queue</button>
+              <button className="playlistButton">Playlist</button>
+            </div>
+          </div>
+        </div>
+
+
+          // Song six 
+          <div className="newSongDiv">
+            <div className="childTwo-1">
+              <a href="#">crazy frog song is great</a>
+            </div>
+            <button onClick={showDiv}>+</button>
+            <div className="childTwo-2">
+              <button className="queueButton">Queue</button>
+              <button className="playlistButton">Playlist</button>
+            </div>
+          </div>
+        </div>
+
+       </div> */}
       </div>
-      
-      <div className="parentTwo">
-
-        {/* <div className="newSongDiv">
-          <div className="childTwo-1">
-            <a href="#">This is the greatest song</a>
-          </div>
-          <button onClick={showDiv}>+</button>
-          <div className="childTwo-2">
-            <button className="queueButton">Queue</button>
-            <button className="playlistButton">Playlist</button>
-          </div>
-        </div>
-
-      
-        <div className="newSongDiv">
-          <div className="childTwo-1">
-            <a href="#">Wow what a song this is</a>
-          </div>
-          <button onClick={showDiv}>+</button>
-          <div className="childTwo-2">
-            <button className="queueButton">Queue</button>
-            <button className="playlistButton">Playlist</button>
-          </div>
-        </div>
-
-      
-        <div className="newSongDiv">
-          <div className="childTwo-1">
-            <a href="#">Sing along to my song</a>
-          </div>
-          <button onClick={showDiv}>+</button>
-          <div className="childTwo-2">
-            <button className="queueButton">Queue</button>
-            <button className="playlistButton">Playlist</button>
-          </div>
-        </div>
-
-
-      
-        <div className="newSongDiv">
-          <div className="childTwo-1">
-            <a href="#">No ideas at all song</a>
-          </div>
-          <button onClick={showDiv}>+</button>
-          <div className="childTwo-2">
-            <button className="queueButton">Queue</button>
-            <button className="playlistButton">Playlist</button>
-          </div>
-        </div>
-
-
-      
-        <div className="newSongDiv">
-          <div className="childTwo-1">
-            <a href="#">lorem ipsum song wow</a>
-          </div>
-          <button onClick={showDiv}>+</button>
-          <div className="childTwo-2">
-            <button className="queueButton">Queue</button>
-            <button className="playlistButton">Playlist</button>
-          </div>
-        </div>
-
-
-      
-        <div className="newSongDiv">
-          <div className="childTwo-1">
-            <a href="#">crazy frog song is great</a>
-          </div>
-          <button onClick={showDiv}>+</button>
-          <div className="childTwo-2">
-            <button className="queueButton">Queue</button>
-            <button className="playlistButton">Playlist</button>
-          </div>
-        </div> */}
-
-      </div>
-    </div>
+    </div >
   )
 }
 

@@ -9,6 +9,7 @@ import Queue from './pages/Queue'
 import Playlist from "./pages/Playlist"
 import OwnPlaylist from "./pages/OwnPlaylist"
 import './CSS/App.css'
+import ArtistPage from './components/ArtistPage'
 // import Progressbar from './pages/Progressbar'
 
 import {
@@ -54,6 +55,7 @@ function App() {
           <Route path="/queue" exact component={Queue} />
           <Route path="/bigplayer" exact component={BigPlayer} />
           <Route path="/playlist" exact component={Playlist} />
+          <Route path="/artistpage" exact component={ArtistPage} />
           {/* <Progressbar /> */}
         </main>
 

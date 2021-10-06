@@ -33,7 +33,7 @@
 /* Parent div (Song and buttons) */
 .parentTwo{
   text-align: left;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.8);
   width: 65%;
