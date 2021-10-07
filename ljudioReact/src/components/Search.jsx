@@ -50,7 +50,7 @@ function Search() {
           <input type="text" className="inputField" placeholder="Search" onChange={e => setInput(e.target.value)} onKeyPress={triggerSearch} />
           <button className="searchBtn" onClick={searchSong}></button>
           {songs && songs.map(song => (
-            <div key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
+            <div className="songClick" key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
           ))}
         </div>
         <BigPlayer />

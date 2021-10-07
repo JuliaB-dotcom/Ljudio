@@ -69,23 +69,23 @@ function Player({ videoId }) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <div className="songDiv123">
+
+          <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>Songname</h1>
+
+        </div>
 
         <div className="playItems">
           <button className="prevButt"></button>
 
-          <button onClick={pauseSong}>pause</button>
-          <button onClick={playSong}>play</button>
+          <button className="pauseButt" onClick={pauseSong}></button>
+          <button className="playButt" onClick={playSong}></button>
 
 
           <button className="nextButt"></button>
         </div>
 
 
-        <div className="songDiv123">
-
-          <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>Songname</h1>
-
-        </div>
 
         <div className="playItems">
 

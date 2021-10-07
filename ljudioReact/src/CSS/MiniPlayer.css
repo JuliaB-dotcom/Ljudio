@@ -86,6 +86,7 @@ width: 70px;
 height: 70px;
 order:1;
 border: 0;
+margin-top: 6px;
 }
 .nextButt{
 background: url("/src/image/nextbutton.png");
@@ -97,9 +98,10 @@ width: 70px;
 height: 70px; 
 order: 3;
 border: 0;
+margin-top: 5px;
 }
 .playButt{
-  background: url("/src/image/playbuttonround.png");
+  background: url("/src/image/newplaybutton.png");
  background-repeat: no-repeat;
 background-size: 100%;
 ;
@@ -107,6 +109,19 @@ background-size: 100%;
 width: 70px;
 
 height: 70px;
+order: 2;
+border: 0;
+}
+
+.pauseButt{
+   background: url("/src/image/pausebutton.png");
+ background-repeat: no-repeat;
+background-size: 100%;
+;
+
+width: 60px;
+
+height: 60px;
 order: 2;
 border: 0;
 }
