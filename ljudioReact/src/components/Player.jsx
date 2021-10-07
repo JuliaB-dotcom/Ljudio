@@ -44,10 +44,8 @@ function Player({ videoId }) {
     if (event.data != YT.PlayerState.PLAYING) return
   }
 
-  function playSong(videoId) {
-    // console.log('Play song');
-    // let videoId = 'dQw4w9WgXcQ';
-    player.loadVideoById(videoId);
+  function playSong() {
+    player.playVideo();
   }
 
   function pauseSong() {
@@ -61,12 +59,14 @@ function Player({ videoId }) {
       <div id="yt-player">
 
       </div>
-<div className="playItems">
-      <button className="prevButt"></button>
+      <div className="playItems">
+        <button className="prevButt"></button>
 
-      <button onClick={pauseSong}>pause</button>
+        <button onClick={pauseSong}>pause</button>
+        <button onClick={playSong}>play</button>
 
-      <button className="nextButt"></button>
+
+        <button className="nextButt"></button>
       </div>
 
 
