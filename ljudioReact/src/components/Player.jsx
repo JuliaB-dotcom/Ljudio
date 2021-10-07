@@ -59,15 +59,7 @@ function Player({ videoId }) {
       <div id="yt-player">
 
       </div>
-      <div className="playItems">
-        <button className="prevButt"></button>
 
-        <button onClick={pauseSong}>pause</button>
-        <button onClick={playSong}>play</button>
-
-
-        <button className="nextButt"></button>
-      </div>
 
 
       <div className="parent">
@@ -75,7 +67,15 @@ function Player({ videoId }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
+        <div className="playItems">
+          <button className="prevButt"></button>
 
+          <button onClick={pauseSong}>pause</button>
+          <button onClick={playSong}>play</button>
+
+
+          <button className="nextButt"></button>
+        </div>
 
 
         <div className="songDiv123">
