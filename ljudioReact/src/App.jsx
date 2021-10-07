@@ -50,6 +50,7 @@ function App() {
           {' | '}
           <Link to="/product">OwnPlaylist</Link>
         </nav> */}
+       
         <Player />
         <main>
           <Route path="/" component={Start} />

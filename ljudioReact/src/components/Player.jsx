@@ -56,29 +56,55 @@ function Player({ videoId }) {
 
   return (
 
-    <div id="yt-player">
+    <div>
+
+      <div id="yt-player">
+
+      </div>
+<div className="playItems">
+      <button className="prevButt"></button>
+
+      <button onClick={pauseSong}>pause</button>
+
+      <button className="nextButt"></button>
+      </div>
+
 
       <div className="parent">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
 
+
+
         <div className="songDiv123">
+
           <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>Songname</h1>
+
         </div>
+
         <div className="playItems">
 
-          <button className="prevButt">prev</button>
-          <button onClick={pauseSong}>pause</button>
-          <button className="nextButt">next</button>
+
+
         </div>
 
+
+
         <div className="textButtons">
+
           <button className="playlist" onClick={() => { history.push('/playlist') }}>PLAYLIST</button>
+
           <button className="playlist" onClick={() => { history.push('/queue') }}>Queue</button>
+
           <button className="playlist">RANDOM</button>
+
         </div>
+
       </div>
+
+
 
 
     </div>

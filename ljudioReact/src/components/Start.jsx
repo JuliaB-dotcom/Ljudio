@@ -4,7 +4,7 @@ function Start() {
 
   return (
     <div>
-      <Player />
+     
       <Search />
 
     </div>
