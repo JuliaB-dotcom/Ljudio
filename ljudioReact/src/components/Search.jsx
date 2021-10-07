@@ -2,9 +2,9 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import BigPlayer from '../pages/BigPlayer'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
+import Queue from '../pages/Queue'
 
 import '/src/CSS/Search.css'
-
 function Search() {
   const [input, setInput] = useState('')
   const [songs, setSongs] = useState()
@@ -12,7 +12,8 @@ function Search() {
   const [context, updateContext] = useContext(PlayerContext)
 
 
-  function showDiv() {
+  function showDiv(song) {
+    console.log(song);
     let buttonsDiv = document.getElementsByClassName("childTwo-2");
     console.log(buttonsDiv[0].style);
     if (buttonsDiv[0].style.display == "none") {
@@ -41,6 +42,24 @@ function Search() {
       document.getElementsByClassName('searchBtn')[0].click();
     }
   }
+  const [queue, setQueue] = useState()
+
+  function sendSongToQueue(song) {
+    context.queue.push(song.name);
+    // console.log(context.queue);
+    // return (
+    //   <Queue songs={context.queue} />
+    // )
+    // // console.log(song);
+
+
+    // // context.updateContext(song)
+    // // setQueue(song)
+    // console.log(context.queue);
+
+
+  }
+
   return (
     <div className="parentOne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,7 +69,15 @@ function Search() {
           <input type="text" className="inputField" placeholder="Search" onChange={e => setInput(e.target.value)} onKeyPress={triggerSearch} />
           <button className="searchBtn" onClick={searchSong}></button>
           {songs && songs.map(song => (
-            <div className="songClick" key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
+            <div>
+              <div className="songClick" key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
+              <button className="addButton" onClick={() => showDiv(song)}>+</button>
+              <div className="childTwo-2">
+                {/* <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button> */}
+                <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button>
+                <button className="playlistButton">Playlist</button>
+              </div>
+            </div>
           ))}
         </div>
         <BigPlayer />
