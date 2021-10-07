@@ -36,14 +36,18 @@ function Search() {
 
     context.player.loadVideoById(song.videoId)
   }
-
+  function triggerSearch(event) {
+    if (event.key === 'Enter') {
+      document.getElementsByClassName('searchBtn')[0].click();
+    }
+  }
   return (
     <div className="parentOne">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <div className="parentOne">
         <div className="childOne-1">
-          <input type="text" className="inputField" placeholder="Search" onChange={e => setInput(e.target.value)} />
+          <input type="text" className="inputField" placeholder="Search" onChange={e => setInput(e.target.value)} onKeyPress={triggerSearch} />
           <button className="searchBtn" onClick={searchSong}></button>
           {songs && songs.map(song => (
             <div key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>

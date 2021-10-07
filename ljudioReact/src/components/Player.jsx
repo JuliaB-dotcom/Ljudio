@@ -45,10 +45,13 @@ function Player({ videoId }) {
   }
 
   function playSong() {
+    console.log(player.pauseVideo());
     player.playVideo();
   }
 
   function pauseSong() {
+    console.log(player.pauseVideo());
+    console.log(player.playVideo());
     player.pauseVideo();
   }
 
