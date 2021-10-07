@@ -12,7 +12,7 @@ function Queue() {
   const [queue, setQueue] = useState()
 
   function sendToQueue() {
-    console.log("this works" + context.queue);
+    setQueue(context.queue);
   }
 
   // function sendToQueue({ songs }) {
@@ -25,27 +25,31 @@ function Queue() {
 
 
 
-
-      {queue && queue.map(song => (
-        <div>
-          <div key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
-        </div>
-      ))}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <button onClick={() => sendToQueue()}>seeQueue</button>
+      <div className="queueMain">
+        <p className="queueName">Queue</p>
+        {queue && queue.map(song => (
+          <div className="songDiv">
+            <button className="song1" key={song.name} onClick={() => songClick(song)}>{song.name}</button>
+            <button className="xButton">X</button>
+          </div>
+        ))}
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <button onClick={() => sendToQueue()}>seeQueue</button>
       <div className="queueMain">
         <p className="queueName">Queue</p>
         <div className="songDiv">
@@ -69,7 +73,7 @@ function Queue() {
           <button className="xButton">X</button>
         </div>
 
-      </div>
+      </div> */}
     </div>
   )
 }

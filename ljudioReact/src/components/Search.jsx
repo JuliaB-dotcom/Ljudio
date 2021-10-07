@@ -45,7 +45,8 @@ function Search() {
   const [queue, setQueue] = useState()
 
   function sendSongToQueue(song) {
-    context.queue.push(song.name);
+    context.queue.push(song);
+    setQueue(context.queue);
     // console.log(context.queue);
     // return (
     //   <Queue songs={context.queue} />
