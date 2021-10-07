@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
+import '/src/CSS/MiniPlayer.css'
+import { useHistory } from "react-router-dom"
+
 
 // props with a function to update song
 function Player({ videoId }) {
@@ -7,7 +10,7 @@ function Player({ videoId }) {
   useEffect(() => {
     loadPlayer()
   }, [])
-
+  let history = useHistory();
   // run this every time videoId changes
   // useEffect(() => {
   //   if(videoId) {
@@ -52,9 +55,50 @@ function Player({ videoId }) {
   }
 
   return (
-    <div>
-      <div id="yt-player"></div>
+
+    <div id="yt-player">
+
+      <div className="parent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+        <div className="songDiv123">
+          <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>Songname</h1>
+        </div>
+        <div className="playItems">
+
+          <button className="prevButt">prev</button>
+          <button onClick={pauseSong}>pause</button>
+          <button className="nextButt">next</button>
+        </div>
+
+        <div className="textButtons">
+          <button className="playlist" onClick={() => { history.push('/playlist') }}>PLAYLIST</button>
+          <button className="playlist" onClick={() => { history.push('/queue') }}>Queue</button>
+          <button className="playlist">RANDOM</button>
+        </div>
+      </div>
+
+
     </div>
+
+
+    // <div>
+
+    //   <div id="yt-player"></div>
+
+
+
+    //   <div>
+
+    //     <button onClick={playSong}>Play</button>
+
+    //     <button onClick={pauseSong}>Pause</button>
+
+    //   </div>
+
+    // </div>
   )
 }
 

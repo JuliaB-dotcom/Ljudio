@@ -1,10 +1,10 @@
-import MiniPlayer from "./MiniPlayer"
+import Player from "./Player"
 import Search from './Search'
 function Start() {
 
   return (
     <div>
-      <MiniPlayer />
+      <Player />
       <Search />
 
     </div>

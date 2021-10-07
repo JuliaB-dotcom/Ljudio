@@ -3,7 +3,7 @@ import { PlayerContext } from './contexts/PlayerContexts'
 import Start from "./components/Start"
 import BigPlayer from "./pages/BigPlayer"
 import Search from "./components/Search"
-import MiniPlayer from './components/MiniPlayer'
+
 //import Intro from './components/Intro'
 import Queue from './pages/Queue'
 import Playlist from "./pages/Playlist"
