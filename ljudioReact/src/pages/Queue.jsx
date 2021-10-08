@@ -15,65 +15,22 @@ function Queue() {
     setQueue(context.queue);
   }
 
-  // function sendToQueue({ songs }) {
-  //   return songs.map(song => (
-  //     <h1>{song.name}</h1>
-  //   ));
-  // }
+  function removeSong(song) {
+    let index = context.queue.indexOf(song);
+    context.queue.splice(index, 1);
+  }
   return (
     <div className="queueDiv">
-
-
-
       <button onClick={() => sendToQueue()}>seeQueue</button>
       <div className="queueMain">
         <p className="queueName">Queue</p>
         {queue && queue.map(song => (
           <div className="songDiv">
             <button className="song1" key={song.name} onClick={() => songClick(song)}>{song.name}</button>
-            <button className="xButton">X</button>
+            <button className="xButton" onClick={() => removeSong(song)}>X</button>
           </div>
         ))}
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* <button onClick={() => sendToQueue()}>seeQueue</button>
-      <div className="queueMain">
-        <p className="queueName">Queue</p>
-        <div className="songDiv">
-          <button className="song1">song</button>
-          <button className="xButton">X</button>
-        </div>
-        <div className="songDiv">
-          <button className="song1">song</button>
-          <button className="xButton">X</button>
-        </div>
-        <div className="songDiv">
-          <button className="song1">song</button>
-          <button className="xButton">X</button>
-        </div>
-        <div className="songDiv">
-          <button className="song1">song</button>
-          <button className="xButton">X</button>
-        </div>
-        <div className="songDiv">
-          <button className="song1">song</button>
-          <button className="xButton">X</button>
-        </div>
-
-      </div> */}
     </div>
   )
 }
