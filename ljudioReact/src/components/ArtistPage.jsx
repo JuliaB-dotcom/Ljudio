@@ -1,7 +1,16 @@
 import React from 'react'
 import '/src/ArtistPage.css'
-
+import Search from './Search'
+import { useParams } from 'react-router-dom'
 function ArtistPage() {
+  let { browseId } = useParams()
+
+  console.log(browseId);
+  async function getArtistName() {
+    let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/artist/' + browseId)
+    let result = await response.json()
+    console.log(result);
+  }
   return (
     <div className="artistPageMainDiv">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +23,7 @@ function ArtistPage() {
       <div className="songsDiv">
         <h1>Songs</h1>
         <button>Share</button>
+        <button onClick={getArtistName}>getArtistName</button>
       </div>
       <div className="artistsSongs">
         <p>Here goes all the songs</p>

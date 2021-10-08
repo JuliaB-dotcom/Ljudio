@@ -43,14 +43,15 @@ function App() {
   return (
     <div className="baseDiv">
       <Router>
-        {/* <nav>
-          <Link to="/">Start</Link>
+        <nav>
+          {/* <Link to="/">Start</Link>
           {' | '}
           <Link to="/about">Bigplayer</Link>
           {' | '}
-          <Link to="/product">OwnPlaylist</Link>
-        </nav> */}
-       
+          <Link to="/product">OwnPlaylist</Link> */}
+          <Link to="/artistpage">Artistpage</Link>
+        </nav>
+
         <Player />
         <main>
           <Route path="/" component={Start} />
@@ -58,6 +59,7 @@ function App() {
           <Route path="/bigplayer" exact component={BigPlayer} />
           <Route path="/playlist" exact component={Playlist} />
           <Route path="/artistpage" exact component={ArtistPage} />
+          <Route path="/artistpage/:browseId" exact component={ArtistPage} />
           {/* <Progressbar /> */}
         </main>
 

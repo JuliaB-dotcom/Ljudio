@@ -3,9 +3,10 @@ import { useState, useContext } from 'react'
 import BigPlayer from '../pages/BigPlayer'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
 import Queue from '../pages/Queue'
-
+import { useHistory } from "react-router-dom"
 import '/src/CSS/Search.css'
 function Search() {
+  let history = useHistory();
   const [input, setInput] = useState('')
   const [songs, setSongs] = useState()
   const [currentVideoId, setCurrentVideoId] = useState()
@@ -47,19 +48,24 @@ function Search() {
   function sendSongToQueue(song) {
     context.queue.push(song);
     setQueue(context.queue);
-    // console.log(context.queue);
-    // return (
-    //   <Queue songs={context.queue} />
-    // )
-    // // console.log(song);
-
-
-    // // context.updateContext(song)
-    // // setQueue(song)
-    // console.log(context.queue);
-
-
   }
+
+  async function artistClick(song) {
+    let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/artist/' + song.artist.browseId)
+    let result = await response.json()
+    console.log(result);
+    // console.log('/artistpage/' + song.artist.browseId);
+    history.push('/artistpage/' + song.artist.browseId);
+  }
+
+  // async function searchSong() {
+  //   let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/songs/' + input)
+  //   let result = await response.json()
+  //   console.log(result.content)
+  //   setSongs(result.content)
+  // }
+
+
 
   return (
     <div className="parentOne">
@@ -71,7 +77,14 @@ function Search() {
           <button className="searchBtn" onClick={searchSong}></button>
           {songs && songs.map(song => (
             <div>
-              <div className="songClick" key={song.videoId} onClick={() => songClick(song)}>{song.name}</div>
+              <div className="songClick" key={song.videoId} >
+                <div onClick={() => songClick(song)}>
+                  {song.name}
+                </div>
+                <div onClick={() => artistClick(song)}>
+                  {song.artist.name}
+                </div>
+              </div>
               <button className="addButton" onClick={() => showDiv(song)}>+</button>
               <div className="childTwo-2">
                 {/* <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button> */}
