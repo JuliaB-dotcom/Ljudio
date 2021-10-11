@@ -76,6 +76,9 @@ function Player({ videoId }) {
         </div>
 
         <div className="playItems">
+
+          <button type="button" className="shuffleButt">shuffle</button>
+
           <button className="prevButt"></button>
 
           <button className="pauseButt" onClick={pauseSong}></button>
@@ -83,6 +86,7 @@ function Player({ videoId }) {
 
 
           <button className="nextButt"></button>
+          <button type="button" className="loopButt">Loop</button>
         </div>
 
 

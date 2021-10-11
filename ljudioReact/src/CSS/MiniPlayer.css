@@ -84,7 +84,7 @@ background-size: 100%;
 width: 70px;
 
 height: 70px;
-order:1;
+order:2;
 border: 0;
 margin-top: 6px;
 }
@@ -96,7 +96,7 @@ background-size: 100%;
 width: 70px; 
 
 height: 70px; 
-order: 3;
+order: 5;
 border: 0;
 margin-top: 5px;
 }
@@ -109,7 +109,7 @@ background-size: 100%;
 width: 70px;
 
 height: 70px;
-order: 2;
+order: 4;
 border: 0;
 }
 
@@ -122,8 +122,20 @@ background-size: 100%;
 width: 60px;
 
 height: 60px;
-order: 2;
+order: 3;
 border: 0;
+}
+
+.shuffleButt{
+order: 1;
+margin-bottom: 25px;
+}
+
+.loopButt{
+order: 6;
+margin-bottom: 25px;
+
+
 }
 
 
