@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
 import '/src/CSS/MiniPlayer.css'
 import { useHistory } from "react-router-dom"
+import Queue from "../pages/Queue"
 
 
 // props with a function to update song
@@ -55,6 +56,14 @@ function Player({ videoId }) {
     player.pauseVideo();
   }
 
+  function previousSong() {
+
+  }
+
+  function nextSong() {
+
+  }
+
   return (
 
     <div>
@@ -79,13 +88,13 @@ function Player({ videoId }) {
 
           <button type="button" className="shuffleButt">shuffle</button>
 
-          <button className="prevButt"></button>
+          <button className="prevButt" onClick={previousSong}></button>
 
           <button className="pauseButt" onClick={pauseSong}></button>
           <button className="playButt" onClick={playSong}></button>
 
 
-          <button className="nextButt"></button>
+          <button className="nextButt" onClick={nextSong}></button>
           <button type="button" className="loopButt">Loop</button>
         </div>
 
