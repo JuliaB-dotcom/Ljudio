@@ -19,6 +19,13 @@ function Queue() {
     let index = context.queue.indexOf(song);
     context.queue.splice(index, 1);
   }
+
+  function playSongFromQueue(song) {
+    //songClick(song);
+    context.currentSong = [];
+    context.currentSong.push(song)
+    console.log("this is in queue:", context.currentSong[0].name);
+  }
   return (
     <div className="queueDiv">
       <button onClick={() => sendToQueue()}>seeQueue</button>
@@ -26,7 +33,7 @@ function Queue() {
         <p className="queueName">Queue</p>
         {queue && queue.map(song => (
           <div className="songDiv">
-            <button className="song1" key={song.name} onClick={() => songClick(song)}>{song.name}</button>
+            <button className="song1" key={song.name} onClick={() => playSongFromQueue(song)}>{song.name}</button>
             <button className="xButton" onClick={() => removeSong(song)}>X</button>
           </div>
         ))}

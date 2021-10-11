@@ -21,6 +21,7 @@ function Player({ videoId }) {
 
   const [player, setPlayer] = useState()
   const [context, updateContext] = useContext(PlayerContext)
+  const [queue, setQueue] = useState()
 
   function loadPlayer() {
     let ytPlayer = new YT.Player('yt-player', {
@@ -61,8 +62,12 @@ function Player({ videoId }) {
   }
 
   function nextSong() {
-
+    console.log(context.currentSong[0]);
   }
+
+
+
+
 
   return (
 
@@ -89,12 +94,10 @@ function Player({ videoId }) {
           <button type="button" className="shuffleButt">shuffle</button>
 
           <button className="prevButt" onClick={previousSong}></button>
-
           <button className="pauseButt" onClick={pauseSong}></button>
           <button className="playButt" onClick={playSong}></button>
-
-
           <button className="nextButt" onClick={nextSong}></button>
+
           <button type="button" className="loopButt">Loop</button>
         </div>
 
