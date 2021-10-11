@@ -171,6 +171,7 @@ order: 2;
 
 
 .slider {
+  transform:translate(-50%,-50%);
   -webkit-appearance: none;
   width: 100%;
   height: 15px;
@@ -200,4 +201,15 @@ order: 2;
   border-radius: 50%;
   background: #04AA6D;
   cursor: pointer;
+}
+.progressBarLine{
+
+position:fixed;
+
+top:0;
+
+/* position: absolute; */
+
+width: 100%;
+
 }
