@@ -54,6 +54,7 @@ function App() {
 
         <Player />
         <main>
+          
           <Route path="/" component={Start} />
           <Route path="/queue" exact component={Queue} />
           <Route path="/bigplayer" exact component={BigPlayer} />
