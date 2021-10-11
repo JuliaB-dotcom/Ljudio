@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
 import '/src/CSS/MiniPlayer.css'
 import { useHistory } from "react-router-dom"
-import Queue from "../pages/Queue"
+import Search from "./Search"
 
 
 // props with a function to update song
@@ -61,10 +61,18 @@ function Player({ videoId }) {
 
   }
 
-  function nextSong() {
+  function nextSong(song) {
     console.log(context.currentSong[0]);
-    let next = context.currentSong[1];
-    console.log("NEXT SONG: ", next);
+    let index = context.queue.indexOf(song) + 1;
+    console.log("index 1: ", index);
+    let next = index + 1;
+    // let next = context.queue[index + 1];
+    context.queue[next];
+    console.log("NEXT SONG: ", context.queue[next]);
+
+    index = next;
+    console.log("index 2: ", index);
+    context.currentSong.push(context.queue[next]);
   }
 
 
@@ -98,7 +106,7 @@ function Player({ videoId }) {
           <button className="prevButt" onClick={previousSong}></button>
           <button className="pauseButt" onClick={pauseSong}></button>
           <button className="playButt" onClick={playSong}></button>
-          <button className="nextButt" onClick={nextSong}></button>
+          <button className="nextButt" onClick={() => nextSong(Search.song)}></button>
 
           <button type="button" className="loopButt">Loop</button>
         </div>
