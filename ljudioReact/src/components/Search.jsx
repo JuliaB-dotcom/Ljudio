@@ -3,6 +3,7 @@ import { useState, useContext } from 'react'
 import BigPlayer from '../pages/BigPlayer'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
 import Queue from '../pages/Queue'
+import ArtistPage from './ArtistPage'
 import { useHistory } from "react-router-dom"
 import '/src/CSS/Search.css'
 function Search() {
@@ -46,14 +47,19 @@ function Search() {
   const [queue, setQueue] = useState()
 
   function sendSongToQueue(song) {
+    console.log(context.queue);
     context.queue.push(song);
     setQueue(context.queue);
   }
 
+  const [artist, setArtist] = useState()
+
   async function artistClick(song) {
     let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/artist/' + song.artist.browseId)
     let result = await response.json()
-    console.log(result);
+    context.artist.push(result);
+    setArtist(context.artist);
+    console.log(context.artist);
     // console.log('/artistpage/' + song.artist.browseId);
     history.push('/artistpage/' + song.artist.browseId);
   }

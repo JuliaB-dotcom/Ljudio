@@ -7,6 +7,7 @@ function PlayerContextProvider(props) {
   const [context, setContext] = useState({
     player: null,
     queue: [],
+    artist: [],
     currentSong: null
   })
 
