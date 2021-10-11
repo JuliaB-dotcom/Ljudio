@@ -50,6 +50,7 @@ function Search() {
 
   function sendSongToQueue(song) {
     context.queue.push(song);
+    //context.queue.push(currentSong[0]);
     setQueue(context.queue);
   }
 

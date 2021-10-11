@@ -63,6 +63,8 @@ function Player({ videoId }) {
 
   function nextSong() {
     console.log(context.currentSong[0]);
+    let next = context.currentSong[1];
+    console.log("NEXT SONG: ", next);
   }
 
 

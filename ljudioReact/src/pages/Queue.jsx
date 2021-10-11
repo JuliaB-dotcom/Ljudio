@@ -22,9 +22,12 @@ function Queue() {
 
   function playSongFromQueue(song) {
     //songClick(song);
+    let index = context.queue.indexOf(song);
     context.currentSong = [];
-    context.currentSong.push(song)
+    context.currentSong.push(context.queue[index]);
+    // context.currentSong.push(song)
     console.log("this is in queue:", context.currentSong[0].name);
+
   }
   return (
     <div className="queueDiv">
