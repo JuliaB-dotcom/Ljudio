@@ -40,8 +40,10 @@ function BigPlayer() {
            
             <input
               className="slider"
-              step="0.01"
+              // step="0.01"
               // value={progress}
+              min="1"
+              max="100"
               onChange={changeSongPosition}
               type="range"
               style={{ width: '100%' }}
