@@ -33,7 +33,8 @@ function BigPlayer() {
   return (
 
     <div className="bigPlayerDiv">
-
+      {/* <div className="albumImg" style={{ backgroundImage: `url(${context.album[0].thumbnails[0].url})` }}>
+        </div> */}
       <div className="btnDiv">
         <div className="progressBar">
           <div className="progressBarLine">
