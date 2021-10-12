@@ -17,7 +17,7 @@ function BigPlayer() {
       let playedPercent = (currentTime / duration) * 100
 
       // TODO: don't update when user is moving the slider
-      
+
       setProgress(playedPercent)
     }, 100)
   }, [context.player])
@@ -42,8 +42,8 @@ function BigPlayer() {
               className="slider"
               // step="0.01"
               // value={progress}
-              min="1"
-              max="100"
+              // min="1"
+              // max="100"
               onChange={changeSongPosition}
               type="range"
               style={{ width: '100%' }}
