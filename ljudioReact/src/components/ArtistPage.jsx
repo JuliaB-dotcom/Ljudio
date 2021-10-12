@@ -8,23 +8,18 @@ import { PlayerContext } from '/src/contexts/PlayerContexts'
 function ArtistPage() {
   let { browseId } = useParams()
   const [context, updateContext] = useContext(PlayerContext)
-
-  // const [artist, setArtist] = useState()
-
-  // getArtistName();
-
+  const [currentVideoId, setCurrentVideoId] = useState()
   console.log(browseId);
-  // function getArtistName() {
-  //   // let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/artist/' + browseId)
-  //   // let result = await response.json()
-  //   // console.log(result);
-  //   console.log(context.artist);
-  //   console.log(context.artist[0].name);
-  //   // setArtist(result);
-  // }
+  console.log(context.artist);
+
+  function songClick(videoId) {
+    setCurrentVideoId(videoId)
+    context.player.loadVideoById(videoId)
+  }
+
   return (
     <div className="artistPageMainDiv">
-      <div className="artistImgAndName">
+      <div className="artistImgAndName" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/lvljPphlOujSX0U4nt-RM2dKJNtJnLhtRuf1QdPRmU4ci1eCAtDV8Xne2NU02Y6UHoa5tGO15ZNOhIE=w1440-h600-p-l90-rj')" }}>
         {/* <img src="/src/image/testImage.png" alt="" /> */}
         {/* <div className="artistName"> */}
         <h1>{context.artist[0].name}</h1>
@@ -34,12 +29,11 @@ function ArtistPage() {
         <h1>Songs</h1>
         <button>Share</button>
       </div>
-      <div className="artistsSongs">
-        <p>{context.artist[0].products.songs.content[0].name}</p>
-        <p>Here goes all the songs</p>
-        <p>Here goes all the songs</p>
-        <p>Here goes all the songs</p>
-      </div>
+      {context.artist[0].products.songs.content.map(artistsong => (
+        <div className="artistsSongs" onClick={() => songClick(artistsong.videoId)}>
+          {artistsong.name}
+        </div>
+      ))}
       <h1 className="aboutH1">About</h1>
       <div className="aboutTextDiv">
         <p>

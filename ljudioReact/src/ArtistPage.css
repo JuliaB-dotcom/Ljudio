@@ -12,7 +12,7 @@
 .artistImgAndName{
   position: relative;
   text-align: center;
-  background: url("/src/image/testImage.png");
+  /* background: url("/src/image/testImage.png"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
