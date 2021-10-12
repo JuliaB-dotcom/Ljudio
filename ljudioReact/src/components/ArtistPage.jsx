@@ -11,6 +11,7 @@ function ArtistPage() {
   const [currentVideoId, setCurrentVideoId] = useState()
   console.log(browseId);
   console.log(context.artist);
+  console.log(context.artist[0].thumbnails[0].url);
 
   function songClick(videoId) {
     setCurrentVideoId(videoId)
@@ -19,7 +20,7 @@ function ArtistPage() {
 
   return (
     <div className="artistPageMainDiv">
-      <div className="artistImgAndName" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/lvljPphlOujSX0U4nt-RM2dKJNtJnLhtRuf1QdPRmU4ci1eCAtDV8Xne2NU02Y6UHoa5tGO15ZNOhIE=w1440-h600-p-l90-rj')" }}>
+      <div className="artistImgAndName" style={{ backgroundImage: `url(${context.artist[0].thumbnails[0].url})` }}>
         {/* <img src="/src/image/testImage.png" alt="" /> */}
         {/* <div className="artistName"> */}
         <h1>{context.artist[0].name}</h1>
