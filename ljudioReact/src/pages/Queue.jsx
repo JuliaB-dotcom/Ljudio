@@ -20,14 +20,27 @@ function Queue() {
     context.queue.splice(index, 1);
   }
 
-  function playSongFromQueue(song) {
-    //songClick(song);
-    let index = context.queue.indexOf(song);
-    context.currentSong = [];
-    context.currentSong.push(context.queue[index]);
-    // context.currentSong.push(song)
-    console.log("this is in queue:", context.currentSong[0].name);
+  // function playSongFromQueue(song) {
+  //   //songClick(song);
+  //   let index = context.queue.indexOf(song);
+  //   context.currentSong = [];
+  //   context.currentSong.push(context.queue[index]);
+  //   // context.currentSong.push(song)
+  //   console.log("this is in queue:", context.currentSong[0].name);
 
+  // }
+  function playSongFromQueue(song) {
+    setCurrentVideoId(song.videoId)
+    context.player.loadVideoById(song.videoId)
+    console.log(context.queue);
+    console.log(context.queue.indexOf(song));
+  }
+
+  function nextSong(song) {
+    let thisSongIndex = context.queue.indexOf(song);
+    let nextSongIndex = context.queue[thisSongIndex + 1]
+    context.player.loadVideoById(nextSongIndex.videoId)
+    setCurrentVideoId(nextSongIndex.videoId);
   }
   return (
     <div className="queueDiv">
@@ -38,6 +51,7 @@ function Queue() {
           <div className="songDiv">
             <button className="song1" key={song.name} onClick={() => playSongFromQueue(song)}>{song.name}</button>
             <button className="xButton" onClick={() => removeSong(song)}>X</button>
+            <button onClick={() => nextSong(song)}>nextSong</button>
           </div>
         ))}
       </div>
