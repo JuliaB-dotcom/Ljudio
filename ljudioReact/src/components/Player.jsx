@@ -37,6 +37,17 @@ function Player({ videoId }) {
       }
     });
   }
+  //Shuffle attempt 1
+  // let getRandom = function (min, max) {
+  //   return Math.random() * (max - min) + min;
+  // }
+
+  // function shuffle() {
+
+  //     let num = getRandom(0, 99);
+
+  //     player.playVideoAt(num);
+  //   }
 
   // this function triggers when we change song in player
   // can be used to update things, like counters
