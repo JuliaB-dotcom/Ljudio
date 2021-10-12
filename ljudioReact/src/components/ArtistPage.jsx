@@ -18,6 +18,20 @@ function ArtistPage() {
     context.player.loadVideoById(videoId)
   }
 
+  async function shareArtist() {
+
+  }
+  function showShare() {
+    let shareDiv = document.getElementsByClassName("sharePlatform");
+    console.log(shareDiv[0].style.display);
+    if (shareDiv[0].style.display == "none") {
+      shareDiv[0].style.setProperty("display", "block")
+    }
+    else {
+      shareDiv[0].style.setProperty("display", "none")
+    }
+  }
+
   return (
     <div className="artistPageMainDiv">
       <div className="artistImgAndName" style={{ backgroundImage: `url(${context.artist[0].thumbnails[0].url})` }}>
@@ -28,7 +42,15 @@ function ArtistPage() {
       </div>
       <div className="songsDiv">
         <h1>Songs</h1>
-        <button>Share</button>
+        <button onClick={showShare}>Share</button>
+        <div className="sharePlatform">
+          <ul>
+
+            <li><a href={"https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.youtube.com%2Fchannel%2F" + browseId}>Facebook</a></li>
+            <li><a href={"https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2F" + browseId}>Twitter</a></li>
+            <li><a href={"https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2F" + browseId}>LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
       {context.artist[0].products.songs.content.map(artistsong => (
         <div className="artistsSongs" onClick={() => songClick(artistsong.videoId)}>
