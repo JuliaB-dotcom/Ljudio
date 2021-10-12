@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
-import '/src/CSS/MiniPlayer.css'
+import '/src/CSS/Player.css'
 import { useHistory } from "react-router-dom"
 
 

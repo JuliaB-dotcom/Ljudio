@@ -46,7 +46,7 @@ function BigPlayer() {
               // max="100"
               onChange={changeSongPosition}
               type="range"
-              style={{ width: '100%' }}
+              style={{ width: '250%' }}
             />
           </div>
 
