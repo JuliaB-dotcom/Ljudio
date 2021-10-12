@@ -22,6 +22,8 @@ function Player({ videoId }) {
   const [player, setPlayer] = useState()
   const [context, updateContext] = useContext(PlayerContext)
   const [queue, setQueue] = useState()
+  const [currentVideoId, setCurrentVideoId] = useState()
+  const [currentSong, setCurrentSong] = useState();
 
   function loadPlayer() {
     let ytPlayer = new YT.Player('yt-player', {
@@ -61,18 +63,20 @@ function Player({ videoId }) {
 
   }
 
-  function nextSong(song) {
-    console.log(context.currentSong[0]);
-    let index = context.queue.indexOf(song) + 1;
-    console.log("index 1: ", index);
-    let next = index + 1;
-    // let next = context.queue[index + 1];
-    context.queue[next];
-    console.log("NEXT SONG: ", context.queue[next]);
+  function nextSong() {
+    let songPlaying = context.currentSong;
+    console.log("currentSong", context.currentSong);
+    console.log("QueueArray", context.queue)
+    let index = context.queue.indexOf(songPlaying);
+    console.log(index);
+    let addIndex = index + 1;
+    let newSong = context.queue[addIndex];
+    console.log(newSong);
 
-    index = next;
-    console.log("index 2: ", index);
-    context.currentSong.push(context.queue[next]);
+    context.player.loadVideoById(newSong.videoId)
+    context.currentSong = [];
+    context.currentSong = newSong;
+    setCurrentVideoId(newSong.videoId);
   }
 
 
@@ -106,7 +110,7 @@ function Player({ videoId }) {
           <button className="prevButt" onClick={previousSong}></button>
           <button className="pauseButt" onClick={pauseSong}></button>
           <button className="playButt" onClick={playSong}></button>
-          <button className="nextButt" onClick={() => nextSong(Search.song)}></button>
+          <button className="nextButt" onClick={nextSong}></button>
 
           <button type="button" className="loopButt">Loop</button>
         </div>

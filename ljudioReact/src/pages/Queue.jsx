@@ -17,6 +17,7 @@ function Queue() {
   }
 
   function removeSong(song) {
+    console.log(song);
     let index = context.queue.indexOf(song);
     context.queue.splice(index, 1);
   }
@@ -39,16 +40,16 @@ function Queue() {
     context.currentSong.push(song);
   }
 
-  function nextSong() {
-    console.log("thisiscurrentsong", context.currentSong);
-    let songPlaying = context.currentSong[0];
-    console.log("hello", songPlaying);
-    let thisSongIndex = context.queue.indexOf(songPlaying);
-    let nextSongIndex = context.queue[thisSongIndex + 1]
-    context.player.loadVideoById(nextSongIndex.videoId)
-    setCurrentSong(context.currentSong)
-    setCurrentVideoId(nextSongIndex.videoId);
-  }
+  // function nextSong() {
+  //   console.log("thisiscurrentsong", context.currentSong);
+  //   let songPlaying = context.currentSong[0];
+  //   console.log("hello", songPlaying);
+  //   let thisSongIndex = context.queue.indexOf(songPlaying);
+  //   let nextSongIndex = context.queue[thisSongIndex + 1]
+  //   context.player.loadVideoById(nextSongIndex.videoId)
+  //   setCurrentSong(context.currentSong)
+  //   setCurrentVideoId(nextSongIndex.videoId);
+  // }
   return (
     <div className="queueDiv">
       <button onClick={() => sendToQueue()}>seeQueue</button>

@@ -49,6 +49,7 @@ function Search() {
   const [queue, setQueue] = useState()
 
   function sendSongToQueue(song) {
+    context.player.cueVideoById(song.videoId);
     context.queue.push(song);
     //context.queue.push(currentSong[0]);
     setQueue(context.queue);
