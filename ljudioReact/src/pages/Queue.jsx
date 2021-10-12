@@ -10,6 +10,7 @@ function Queue() {
   const [currentVideoId, setCurrentVideoId] = useState()
   const [context, updateContext] = useContext(PlayerContext)
   const [queue, setQueue] = useState()
+  const [currentSong, setCurrentSong] = useState();
 
   function sendToQueue() {
     setQueue(context.queue);
@@ -34,12 +35,18 @@ function Queue() {
     context.player.loadVideoById(song.videoId)
     console.log(context.queue);
     console.log(context.queue.indexOf(song));
+    context.currentSong = []
+    context.currentSong.push(song);
   }
 
-  function nextSong(song) {
-    let thisSongIndex = context.queue.indexOf(song);
+  function nextSong() {
+    console.log("thisiscurrentsong", context.currentSong);
+    let songPlaying = context.currentSong[0];
+    console.log("hello", songPlaying);
+    let thisSongIndex = context.queue.indexOf(songPlaying);
     let nextSongIndex = context.queue[thisSongIndex + 1]
     context.player.loadVideoById(nextSongIndex.videoId)
+    setCurrentSong(context.currentSong)
     setCurrentVideoId(nextSongIndex.videoId);
   }
   return (
@@ -51,9 +58,9 @@ function Queue() {
           <div className="songDiv">
             <button className="song1" key={song.name} onClick={() => playSongFromQueue(song)}>{song.name}</button>
             <button className="xButton" onClick={() => removeSong(song)}>X</button>
-            <button onClick={() => nextSong(song)}>nextSong</button>
           </div>
         ))}
+        <button onClick={() => nextSong()}>nextSong</button>
       </div>
     </div>
   )
