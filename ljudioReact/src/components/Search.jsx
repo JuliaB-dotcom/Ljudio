@@ -103,7 +103,7 @@ function Search() {
             </div>
           ))}
         </div>
-        <BigPlayer />
+        {/* <BigPlayer /> */}
         {/*
         
         <div className="parentTwo">

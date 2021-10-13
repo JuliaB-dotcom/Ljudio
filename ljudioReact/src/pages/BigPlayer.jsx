@@ -4,6 +4,7 @@ import { PlayerContext } from '/src/contexts/PlayerContexts'
 
 function BigPlayer() {
   const [context, updateContext] = useContext(PlayerContext)
+  
   const [progress, setProgress] = useState(0)
   const [pauseUpdate, setPauseUpdate] = useState(false)
 
@@ -13,9 +14,10 @@ function BigPlayer() {
     setInterval(() => {
       let currentTime = context.player.getCurrentTime()
       let duration = context.player.getDuration()
-      let playedPercent = (currentTime / duration) * 100
+      let playedPercent = currentTime * (100 / duration) 
 
       // TODO: don't update when user is moving the slider
+
       setProgress(playedPercent)
     }, 100)
   }, [context.player])
@@ -23,24 +25,29 @@ function BigPlayer() {
   function changeSongPosition(e) {
     setProgress(e.target.value)
 
-    let newPosition = context.player.getDuration() / e.target.value
-
+ let newPosition = context.player.getDuration() * (e.target.value/100)
+    console.log(newPosition)
     // change position in song
     context.player.seekTo(newPosition, true)
   }
   return (
 
     <div className="bigPlayerDiv">
-
+      {/* <div className="albumImg" style={{ backgroundImage: `url(${context.album[0].thumbnails[0].url})` }}>
+        </div> */}
       <div className="btnDiv">
         <div className="progressBar">
           <div className="progressBarLine">
+           
             <input
               className="slider"
+              // step="0.01"
               value={progress}
+              // min="1"
+              // max="100"
               onChange={changeSongPosition}
               type="range"
-              style={{ width: '100%' }}
+              style={{ width: '250%' }}
             />
           </div>
 

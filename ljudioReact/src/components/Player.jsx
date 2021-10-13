@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
-import '/src/CSS/MiniPlayer.css'
+import '/src/CSS/Player.css'
 import { useHistory } from "react-router-dom"
 import Search from "./Search"
 
@@ -41,6 +41,17 @@ function Player({ videoId }) {
       }
     });
   }
+  //Shuffle attempt 1
+  // let getRandom = function (min, max) {
+  //   return Math.random() * (max - min) + min;
+  // }
+
+  // function shuffle() {
+
+  //     let num = getRandom(0, 99);
+
+  //     player.playVideoAt(num);
+  //   }
 
   // this function triggers when we change song in player
   // can be used to update things, like counters
