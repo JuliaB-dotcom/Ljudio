@@ -35,7 +35,6 @@ function Queue() {
             <button className="xButton" onClick={() => removeSong(song)}>X</button>
           </div>
         ))}
-        <button onClick={() => nextSong()}>nextSong</button>
       </div>
     </div>
   )

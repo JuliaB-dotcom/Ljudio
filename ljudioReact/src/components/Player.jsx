@@ -25,6 +25,9 @@ function Player({ videoId }) {
   const [currentVideoId, setCurrentVideoId] = useState()
   // const [currentSong, setCurrentSong] = useState();
 
+
+
+
   function loadPlayer() {
     let ytPlayer = new YT.Player('yt-player', {
       height: '0px',
@@ -32,11 +35,12 @@ function Player({ videoId }) {
       events: {
         'onStateChange': onPlayerStateChange,
         'onReady': (e) => {
-          e.target.setVolume(1)
+          e.target.setVolume(10)
           setPlayer(e.target)
           updateContext({
             player: e.target
           }),
+
             getdurationandtime
         }
       }
@@ -56,24 +60,104 @@ function Player({ videoId }) {
 
   // this function triggers when we change song in player
   // can be used to update things, like counters
-  function onPlayerStateChange(event) {
-    if (event.data !== YT.PlayerState.ENDED) {
-      context.queue.forEach(nextSong);
-      console.log("getduration: ", context.player.getDuration())
-      console.log("getCurrentTime: ", context.player.getCurrentTime())
 
-    }
+
+
+  // function onPlayerPlaying(event) {
+
+  //   if (event.data === YT.PlayerState.PLAYING) {
+
+  //     let interval = setInterval(() => {
+
+  //       let currentTime = context.player.getCurrentTime()
+  //       let duration = context.player.getDuration()
+  //       let playedPercent = currentTime * (100 / duration)
+
+
+  //       if (playedPercent > 98) {
+  //         console.log("halååå!", playedPercent);
+  //         nextSong();
+
+  //         clearInterval(interval);
+  //       }
+  //       context.player.setPlayer(interval);
+  //     }, 1000)
+
+
+  //   }
+  // }
+
+  function onPlayerStateChange(event) {
+    // if (event.data !== YT.PlayerState.PLAYING) {
+
+    //   let interval = setInterval(() => {
+
+    //     let currentTime = context.player.getCurrentTime()
+    //     let duration = context.player.getDuration()
+    //     let playedPercent = currentTime * (100 / duration)
+
+
+    //     if (playedPercent > 98) {
+    //       console.log("halååå!", playedPercent);
+    //       nextSong();
+
+    //       clearInterval(interval);
+    //     }
+
+    //   }, 1000)
+
+
   }
 
+
+
+
   function getdurationandtime() {
-    if (context.player.getCurrentTime() > (context.player.getDuration() - 10)) {
-      document.getElementById('nextBtn').click();
-    }
+    // if (context.player.getCurrentTime() > (context.player.getDuration() - 10)) {
+    // }
+
+    let interval = setInterval(() => {
+
+      let currentTime = context.player.getCurrentTime()
+      let duration = context.player.getDuration()
+      let playedPercent = currentTime * (100 / duration)
+
+      if (playedPercent > 90) {
+        console.log("halååå!", playedPercent);
+        nextSong();
+        // document.getElementById('nextBtn').click();
+        clearInterval(interval);
+      }
+
+    }, 1000)
+
+
+    console.log("getduration: ", context.player.getDuration())
+    console.log("getCurrentTime: ", context.player.getCurrentTime())
   }
 
   function playSong() {
     console.log(player.pauseVideo());
-    player.playVideo();
+    if (context.currentSong !== null) {
+
+      let interval = setInterval(() => {
+
+        let currentTime = context.player.getCurrentTime()
+        let duration = context.player.getDuration()
+        let playedPercent = currentTime * (100 / duration)
+
+
+        if (playedPercent > 99) {
+          console.log("halååå!", playedPercent);
+          nextSong();
+
+          clearInterval(interval);
+        }
+
+      }, 1000)
+
+      player.playVideo();
+    }
   }
 
   function pauseSong() {
@@ -134,12 +218,12 @@ function Player({ videoId }) {
 
   return (
 
+
     <div>
 
       <div id="yt-player">
 
       </div>
-
 
 
       <div className="parent">
@@ -190,22 +274,6 @@ function Player({ videoId }) {
 
     </div>
 
-
-    // <div>
-
-    //   <div id="yt-player"></div>
-
-
-
-    //   <div>
-
-    //     <button onClick={playSong}>Play</button>
-
-    //     <button onClick={pauseSong}>Pause</button>
-
-    //   </div>
-
-    // </div>
   )
 }
 
