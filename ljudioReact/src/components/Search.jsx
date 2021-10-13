@@ -39,8 +39,7 @@ function Search() {
     setCurrentVideoId(song.videoId)
 
     context.player.loadVideoById(song.videoId)
-    context.currentSong = [];
-    context.currentSong.push(song)
+    updateContext({ currentSong: newSong });
   }
   function triggerSearch(event) {
     if (event.key === 'Enter') {

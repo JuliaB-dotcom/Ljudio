@@ -56,7 +56,13 @@ function Player({ videoId }) {
   // this function triggers when we change song in player
   // can be used to update things, like counters
   function onPlayerStateChange(event) {
-    if (event.data != YT.PlayerState.PLAYING) return
+
+    if (event.data == YT.PlayerState.ENDED) {
+
+      context.queue.forEach(nextSong);
+
+    }
+
   }
 
   function playSong() {
@@ -100,7 +106,22 @@ function Player({ videoId }) {
     setCurrentVideoId(newSong.videoId);
   }
 
+  // function autoNext() {
 
+  //   console.log("autoNext function helloo");
+
+  //   let index = context.queue.indexOf();
+
+
+  // }
+  // function queueLoop(queue) {
+
+
+  //   queue.array.forEach(() => { console.log("hej forEach") }
+
+  //   );
+
+  // }
 
 
 
