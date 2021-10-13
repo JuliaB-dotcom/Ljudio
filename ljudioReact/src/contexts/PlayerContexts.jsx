@@ -8,7 +8,7 @@ function PlayerContextProvider(props) {
     player: null,
     queue: [],
     artist: [],
-    currentSong: null
+    currentSong: ''
   })
 
   /*

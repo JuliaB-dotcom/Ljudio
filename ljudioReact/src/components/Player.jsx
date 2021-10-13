@@ -23,7 +23,7 @@ function Player({ videoId }) {
   const [context, updateContext] = useContext(PlayerContext)
   const [queue, setQueue] = useState()
   const [currentVideoId, setCurrentVideoId] = useState()
-  const [currentSong, setCurrentSong] = useState();
+  // const [currentSong, setCurrentSong] = useState();
 
   function loadPlayer() {
     let ytPlayer = new YT.Player('yt-player', {
@@ -140,8 +140,7 @@ function Player({ videoId }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <div className="songDiv123">
-
-          <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>Songname</h1>
+          <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>{context.currentSong.name}</h1>
 
         </div>
 
