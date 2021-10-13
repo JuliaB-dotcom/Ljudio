@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
 import '/src/CSS/Player.css'
 import { useHistory } from "react-router-dom"
+import Search from "./Search"
 
 
 // props with a function to update song
@@ -20,6 +21,9 @@ function Player({ videoId }) {
 
   const [player, setPlayer] = useState()
   const [context, updateContext] = useContext(PlayerContext)
+  const [queue, setQueue] = useState()
+  const [currentVideoId, setCurrentVideoId] = useState()
+  const [currentSong, setCurrentSong] = useState();
 
   function loadPlayer() {
     let ytPlayer = new YT.Player('yt-player', {
@@ -66,6 +70,40 @@ function Player({ videoId }) {
     player.pauseVideo();
   }
 
+  function previousSong() {
+    let songPlaying = context.currentSong;
+    console.log("currentSong", context.currentSong);
+    console.log("QueueArray", context.queue)
+    let index = context.queue.indexOf(songPlaying);
+    console.log(index);
+    let addIndex = index - 1;
+    let newSong = context.queue[addIndex];
+    console.log(newSong);
+
+    context.player.loadVideoById(newSong.videoId)
+    updateContext({ currentSong: newSong });
+    setCurrentVideoId(newSong.videoId);
+  }
+
+  function nextSong() {
+    let songPlaying = context.currentSong;
+    console.log("currentSong", context.currentSong);
+    console.log("QueueArray", context.queue)
+    let index = context.queue.indexOf(songPlaying);
+    console.log(index);
+    let addIndex = index + 1;
+    let newSong = context.queue[addIndex];
+    console.log(newSong);
+
+    context.player.loadVideoById(newSong.videoId)
+    updateContext({ currentSong: newSong });
+    setCurrentVideoId(newSong.videoId);
+  }
+
+
+
+
+
   return (
 
     <div>
@@ -90,13 +128,11 @@ function Player({ videoId }) {
 
           <button type="button" className="shuffleButt">shuffle</button>
 
-          <button className="prevButt"></button>
-
+          <button className="prevButt" onClick={previousSong}></button>
           <button className="pauseButt" onClick={pauseSong}></button>
           <button className="playButt" onClick={playSong}></button>
+          <button className="nextButt" onClick={nextSong}></button>
 
-
-          <button className="nextButt"></button>
           <button type="button" className="loopButt">Loop</button>
         </div>
 

@@ -13,6 +13,7 @@ function Search() {
   const [context, updateContext] = useContext(PlayerContext)
 
 
+
   function showDiv(song) {
     console.log(song);
     let buttonsDiv = document.getElementsByClassName("childTwo-2");
@@ -37,6 +38,8 @@ function Search() {
     setCurrentVideoId(song.videoId)
 
     context.player.loadVideoById(song.videoId)
+    context.currentSong = [];
+    context.currentSong.push(song)
   }
   function triggerSearch(event) {
     if (event.key === 'Enter') {
@@ -46,7 +49,9 @@ function Search() {
   const [queue, setQueue] = useState()
 
   function sendSongToQueue(song) {
+    context.player.cueVideoById(song.videoId);
     context.queue.push(song);
+    //context.queue.push(currentSong[0]);
     setQueue(context.queue);
   }
 
