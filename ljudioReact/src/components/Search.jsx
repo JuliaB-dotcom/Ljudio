@@ -94,11 +94,11 @@ function Search() {
                 </div>
               </div>
               <button className="addButton" onClick={() => showDiv(song)}>+</button>
-              <div className="childTwo-2">
-                {/* <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button> */}
+              <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button>
+              <button className="playlistButton">Playlist</button>
+              {/* <div className="childTwo-2">
                 <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button>
-                <button className="playlistButton">Playlist</button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
