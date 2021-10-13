@@ -39,6 +39,7 @@ function Search() {
     setCurrentVideoId(song.videoId)
 
     context.player.loadVideoById(song.videoId)
+    console.log("songclick song:", song);
     updateContext({ currentSong: song });
   }
   function triggerSearch(event) {

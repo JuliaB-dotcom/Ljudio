@@ -36,7 +36,8 @@ function Player({ videoId }) {
           setPlayer(e.target)
           updateContext({
             player: e.target
-          })
+          }),
+            getdurationandtime
         }
       }
     });
@@ -56,13 +57,18 @@ function Player({ videoId }) {
   // this function triggers when we change song in player
   // can be used to update things, like counters
   function onPlayerStateChange(event) {
-
-    if (event.data == YT.PlayerState.ENDED) {
-
+    if (event.data !== YT.PlayerState.ENDED) {
       context.queue.forEach(nextSong);
+      console.log("getduration: ", context.player.getDuration())
+      console.log("getCurrentTime: ", context.player.getCurrentTime())
 
     }
+  }
 
+  function getdurationandtime() {
+    if (context.player.getCurrentTime() > (context.player.getDuration() - 10)) {
+      document.getElementById('nextBtn').click();
+    }
   }
 
   function playSong() {
@@ -92,6 +98,7 @@ function Player({ videoId }) {
   }
 
   function nextSong() {
+    console.log("This is playing: ", context.currentSong);
     let songPlaying = context.currentSong;
     console.log("currentSong", context.currentSong);
     console.log("QueueArray", context.queue)
@@ -141,7 +148,7 @@ function Player({ videoId }) {
 
         <div className="songDiv123">
           <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>{context.currentSong.name}</h1>
-
+          <button onClick={getdurationandtime}>CLICK HERE</button>
         </div>
 
         <div className="playItems">
@@ -151,7 +158,7 @@ function Player({ videoId }) {
           <button className="prevButt" onClick={previousSong}></button>
           <button className="pauseButt" onClick={pauseSong}></button>
           <button className="playButt" onClick={playSong}></button>
-          <button className="nextButt" onClick={nextSong}></button>
+          <button id="nextBtn" className="nextButt" onClick={nextSong}></button>
 
           <button type="button" className="loopButt">Loop</button>
         </div>
