@@ -60,7 +60,18 @@ function Player({ videoId }) {
   }
 
   function previousSong() {
+    let songPlaying = context.currentSong;
+    console.log("currentSong", context.currentSong);
+    console.log("QueueArray", context.queue)
+    let index = context.queue.indexOf(songPlaying);
+    console.log(index);
+    let addIndex = index - 1;
+    let newSong = context.queue[addIndex];
+    console.log(newSong);
 
+    context.player.loadVideoById(newSong.videoId)
+    updateContext({ currentSong: newSong });
+    setCurrentVideoId(newSong.videoId);
   }
 
   function nextSong() {
@@ -74,8 +85,7 @@ function Player({ videoId }) {
     console.log(newSong);
 
     context.player.loadVideoById(newSong.videoId)
-    context.currentSong = [];
-    context.currentSong = newSong;
+    updateContext({ currentSong: newSong });
     setCurrentVideoId(newSong.videoId);
   }
 

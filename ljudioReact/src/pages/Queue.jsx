@@ -10,7 +10,7 @@ function Queue() {
   const [currentVideoId, setCurrentVideoId] = useState()
   const [context, updateContext] = useContext(PlayerContext)
   const [queue, setQueue] = useState()
-  const [currentSong, setCurrentSong] = useState();
+  // const [currentSong, setCurrentSong] = useState();
 
   function sendToQueue() {
     setQueue(context.queue);
@@ -36,8 +36,7 @@ function Queue() {
     context.player.loadVideoById(song.videoId)
     console.log(context.queue);
     console.log(context.queue.indexOf(song));
-    context.currentSong = []
-    context.currentSong.push(song);
+    updateContext({ currentSong: song });
   }
 
   // function nextSong() {
