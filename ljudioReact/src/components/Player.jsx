@@ -106,14 +106,14 @@ function Player({ videoId }) {
     setCurrentVideoId(newSong.videoId);
   }
 
-  // function autoNext() {
+  function autoNext() {
 
-  //   console.log("autoNext function helloo");
+    console.log("autoNext function helloo");
 
-  //   let index = context.queue.indexOf();
+    let index = context.queue.indexOf();
 
 
-  // }
+  }
   // function queueLoop(queue) {
 
 
