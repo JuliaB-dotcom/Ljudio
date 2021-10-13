@@ -42,7 +42,7 @@ function BigPlayer() {
             <input
               className="slider"
               // step="0.01"
-              // value={progress}
+              value={progress}
               // min="1"
               // max="100"
               onChange={changeSongPosition}
