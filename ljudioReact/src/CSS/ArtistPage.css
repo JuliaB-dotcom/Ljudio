@@ -4,6 +4,7 @@
   height: fit-content;
   position: relative;
   text-align: center;
+  overflow: scroll;
 }
 
 .artistImgAndName{
