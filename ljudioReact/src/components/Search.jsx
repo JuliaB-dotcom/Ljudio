@@ -14,12 +14,15 @@ function Search() {
 
   //shows queue and playlist buttons
   function showDiv(song) {
-    let buttonsDiv = document.getElementsByClassName("childTwo-2");
-    if (buttonsDiv[0].style.display == "none") {
-      buttonsDiv[0].style.setProperty("display", "block")
+    let buttonOne = document.getElementsByClassName("playlistButton");
+    let buttonTwo = document.getElementsByClassName("queueButton")
+    if (buttonOne[0].style.display == "none" && buttonTwo[0].style.display == "none") {
+      buttonOne[0].style.setProperty("display", "block")
+      buttonTwo[0].style.setProperty("display", "block")
     }
     else {
-      buttonsDiv[0].style.setProperty("display", "none")
+      buttonOne[0].style.setProperty("display", "none")
+      buttonTwo[0].style.setProperty("display", "none")
     }
   }
 
@@ -65,22 +68,21 @@ function Search() {
   return (
     <div className="parentOne">
       <div className="parentOne">
+        <input type="text" className="inputField" placeholder="Search" onChange={e => setInput(e.target.value)} onKeyPress={triggerSearch} />
+        <button className="searchBtn" onClick={searchSong}></button>
         <div className="childOne-1">
-          <input type="text" className="inputField" placeholder="Search" onChange={e => setInput(e.target.value)} onKeyPress={triggerSearch} />
-          <button className="searchBtn" onClick={searchSong}></button>
           {songs && songs.map(song => (
-            <div>
+            <div className="newSongDiv">
               <div className="songClick" key={song.videoId} >
-                <div onClick={() => songClick(song)}>
+                <div className="songNameDiv" onClick={() => songClick(song)}>
                   {song.name}
                 </div>
-                <div onClick={() => artistClick(song)}>
+                <div className="artistNameDiv" onClick={() => artistClick(song)}>
                   {song.artist.name}
                 </div>
+                <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button>
+                <button className="playlistButton">Playlist</button>
               </div>
-              <button className="addButton" onClick={() => showDiv(song)}>+</button>
-              <button className="queueButton" onClick={() => sendSongToQueue(song)}>Queue</button>
-              <button className="playlistButton">Playlist</button>
             </div>
           ))}
         </div>

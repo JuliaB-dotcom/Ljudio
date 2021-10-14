@@ -22,8 +22,8 @@ function Queue() {
 
   return (
     <div className="queueDiv">
+      <p className="queueName">Queue</p>
       <div className="queueMain">
-        <p className="queueName">Queue</p>
         {context.queue && context.queue.map(song => (
           <div className="songDiv">
             <button className="song1" key={song.name} onClick={() => playSongFromQueue(song)}>{song.name}</button>
