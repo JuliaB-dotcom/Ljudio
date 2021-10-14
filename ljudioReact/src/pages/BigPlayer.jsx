@@ -24,6 +24,7 @@ function BigPlayer() {
     }, 1000)
   }, [context.player])
 
+
   function changeSongPosition(e) {
     setProgress(e.target.value)
 
@@ -31,6 +32,10 @@ function BigPlayer() {
     console.log(newPosition)
     // change position in song
     context.player.seekTo(newPosition, true)
+  }
+
+  function changeVideoLastSecond() {
+
   }
   return (
 

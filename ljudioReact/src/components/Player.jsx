@@ -11,6 +11,7 @@ function Player({ videoId }) {
   useEffect(() => {
     loadPlayer()
   }, [])
+
   let history = useHistory();
   // run this every time videoId changes
   // useEffect(() => {
@@ -25,7 +26,20 @@ function Player({ videoId }) {
   const [currentVideoId, setCurrentVideoId] = useState()
   // const [currentSong, setCurrentSong] = useState();
 
+  useEffect(() => {
+    if (!context.player) return
 
+    setInterval(() => {
+      let currentTime = context.player.getCurrentTime()
+      let duration = context.player.getDuration()
+      let playedPercent = currentTime * (100 / duration)
+
+      // TODO: don't update when user is moving the slider
+      if (playedPercent > 5) {
+        nextSong();
+      }
+    }, 1000)
+  }, [context.player])
 
 
   function loadPlayer() {
@@ -193,6 +207,7 @@ function Player({ videoId }) {
     console.log(newSong);
 
     context.player.loadVideoById(newSong.videoId)
+    context.currentSong = newSong;
     updateContext({ currentSong: newSong });
     setCurrentVideoId(newSong.videoId);
   }
