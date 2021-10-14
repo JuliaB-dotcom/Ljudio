@@ -3,10 +3,11 @@ import React, { useState, useContext, useEffect } from 'react'
 import { PlayerContext } from '/src/contexts/PlayerContexts'
 
 function BigPlayer() {
-  const [context, updateContext] = useContext(PlayerContext)
 
+  const [context, updateContext] = useContext(PlayerContext)
   const [progress, setProgress] = useState(0)
   const [pauseUpdate, setPauseUpdate] = useState(false)
+  // console.log(context.album[0].thumbnails[0].url);
 
   useEffect(() => {
     if (!context.player) return

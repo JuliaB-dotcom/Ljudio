@@ -238,6 +238,11 @@ function Player({ videoId }) {
     updateContext({ currentSong: newSong });
     setCurrentVideoId(newSong.videoId);
   }
+  function loopSong() {
+    let currentSong = context.currentSong;
+    context.player.loadVideoById(currentSong.videoId)
+  
+  }
 
   function autoNext() {
 
@@ -286,7 +291,7 @@ function Player({ videoId }) {
           <button className="playButt" onClick={playSong}></button>
           <button id="nextBtn" className="nextButt" onClick={nextSong}></button>
 
-          <button type="button" className="loopButt">Loop</button>
+          <button type="button" className="loopButt" onClick={loopSong}>Loop</button>
         </div>
 
 
@@ -296,8 +301,6 @@ function Player({ videoId }) {
 
 
         </div>
-
-
 
         <div className="textButtons">
 
