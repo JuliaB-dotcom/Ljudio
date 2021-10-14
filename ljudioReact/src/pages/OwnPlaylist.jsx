@@ -7,7 +7,7 @@ function OwnPlaylist() {
       <div className="playlistDiv1">
         <div className="playlistNameDiv">
           <button className="playListNameBtn"> PLAYLIST NAME</button>
-      </div>
+        </div>
 
         <div className="saveBtnDiv">
           <button>SAVE</button>
@@ -18,15 +18,12 @@ function OwnPlaylist() {
           <button className="queueSong">+</button>
           <button className="removeSong">x</button>
         </div>
-        {/* <button>-</button> */}
 
         <div className="songDiv1">
           <p>Låt2</p>
           <button className="queueSong">+</button>
           <button className="removeSong">x</button>
         </div>
-    
-        {/* <button>-</button> */}
 
         <div className="songDiv1">
           <p>Låt3</p>
@@ -34,15 +31,12 @@ function OwnPlaylist() {
           <button className="removeSong">x</button>
         </div>
 
-        {/* <button>-</button> */}
-
         <div className="songDiv1">
           <p>Låt4</p>
           <button className="queueSong">+</button>
           <button className="removeSong">x</button>
         </div>
 
-        {/* <button>-</button> */}
       </div>
     </div>
   )

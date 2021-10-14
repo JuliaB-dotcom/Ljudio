@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-
 /* Input div (Searchbar) */
 .parentOne{
   width: 100%;
   height:fit-content;
-  /* border: 1px solid green; */
   position:relative;
   text-align: center;
 }
+
 .songClick{
   padding: 5px;
 }
+
 .childOne-1 input{
   margin-top: 3%;
   margin-bottom: 1%;
@@ -29,6 +29,7 @@
   color: #FFFFFF;
   border: 1px solid #350E88;
 }
+
 .childOne-1 .searchBtn{
   background:url('/src/image/searchbutton.png');
   background-repeat: no-repeat;
@@ -39,7 +40,7 @@
 }
 
 .childOne-1{
-margin-left: 15%;
+  margin-left: 15%;
   width: 70%;
   background-color: rgba(0, 0, 0, 0.2);
   padding-bottom: 20px;
@@ -68,7 +69,6 @@ margin-left: 15%;
 
 /* Song name */
 .childTwo-1{
-  /* border: 1px solid yellow; */
   width: 85%;
 }
 
@@ -84,10 +84,8 @@ margin-left: 15%;
 
 
 
-
 /* Queue and playlist buttons */
 .childTwo-2{
-  /* border: 1px solid orange; */
   width: 15%;
   display: none;
 }
@@ -102,35 +100,20 @@ margin-left: 15%;
   text-align: center;
   border: 1px dotted #670994;
   color: white; 
- -webkit-text-stroke: 0.3px #670994;
+  -webkit-text-stroke: 0.3px #670994;
 }
 .backBtn{
   background: url("/src/image/backbutton.png");
- background-repeat: no-repeat;
-background-size: 100%;
-cursor:pointer;
-;
-
-width: 75px;
-
-height: 70px;
-
-border: 0;
-margin-top:-10%;
-margin-left:82%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor:pointer;
+  width: 75px;
+  height: 70px;
+  border: 0;
+  margin-top:-10%;
+  margin-left:82%;
 }
 
 .songClick{
   color: white;
 }
-
-
-/* .searchBtn{
-  background-size: 100%;
-
-  border: 0;
-  padding: 0;
-  position: absolute;
-  left: 25%;
-  background-repeat: no-repeat;
-} */

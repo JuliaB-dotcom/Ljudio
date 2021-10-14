@@ -1,25 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 .queueDiv{
-
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  /* max-width: 50%; */
   font-family: Julius Sans One;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 26px;
   color: white;
- position: relative;
- z-index: 10;
- overflow: auto;
+  position: relative;
+  z-index: 10;
+  overflow: auto;
 }
 
 button{
-color: white;
-font-family: Julius Sans One;
+  color: white;
+  font-family: Julius Sans One;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -27,12 +25,10 @@ font-family: Julius Sans One;
   color: white;
   background-color: transparent;
   border: none;
-    filter: drop-shadow(0px 4px 7px rgba(2, 2, 2, 1.5)); 
-
+  filter: drop-shadow(0px 4px 7px rgba(2, 2, 2, 1.5)); 
 }
 
 .queueMain{
-  
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -42,15 +38,12 @@ font-family: Julius Sans One;
   border-radius: 11px;
   margin: 0% 20%;
   filter: drop-shadow(0px 4px 7px rgba(2, 2, 2, 0.911)); 
- 
-
-
 }
+
 .queueName{
   color: white;
   align-self: center;
   filter: drop-shadow(0px 4px 7px rgb(12, 12, 12)); 
- 
 }
 
 .songDiv{

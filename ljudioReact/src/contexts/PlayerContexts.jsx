@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react'
 
-// export reference to connect with this context
 export const PlayerContext = createContext()
 
 function PlayerContextProvider(props) {
@@ -9,17 +8,10 @@ function PlayerContextProvider(props) {
     queue: [],
     artist: [],
     currentSong: '',
-    inputSongs: []
+    inputSongs: [],
+    clicked: ''
   })
 
-  /*
-    values = {
-      currentSong: { videoId: '23546erge3' }
-    }
-  */
-
-  // use spread to keep old data and only 
-  // replace the once who match
   function updateContext(values) {
     setContext({
       ...context,

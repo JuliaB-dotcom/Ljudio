@@ -1,144 +1,121 @@
 
 .songDiv123{
-display:flex;
-justify-content: center;
-width: 100%;
-
+  display:flex;
+  justify-content: center;
+  width: 100%;
 }
-h1.songName{
-  
-font-family:'Julius Sans One', sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 39px;
-text-align: center;
-cursor:pointer;
-padding: 10px;
-margin: 0;
-color: #FFFFFF;
-text-shadow:-1px -1px 0 #350E88,
-0 -1px 0 #350E88,
-1px -1px 0 #350E88,
-1px 0 0 #350E88,
-1px 1px 0 #350E88,
-0 1px 0 #350E88,
--1px 1px 0 #350E88,
--1px 0 0 #350E88;
 
+h1.songName{  
+  font-family:'Julius Sans One', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 39px;
+  text-align: center;
+  cursor:pointer;
+  padding: 10px;
+  margin: 0;
+  color: #FFFFFF;
+  text-shadow:-1px -1px 0 #350E88;
 }
+
 button{
   cursor:pointer;
   filter:none;
 }
+
 .textButtons {
-
-display: flex;
-justify-content: space-between;
-padding: 1%;
-padding-left: 5%;
-padding-right: 5%;
-
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
-.textButtons button{
-font-family: Julius Sans One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 15px;
-text-align: center;
-background-color:black;
-border: 0;
 
-color: #FFFFFF;
--webkit-text-stroke-width: 0.3px;
--webkit-text-stroke-color: #350E88;
-filter: drop-shadow(0px 5px 7px rgba(140, 0, 255, 5)); 
-border: 0px transparent solid;
-background-color: transparent;
+.textButtons button{
+  font-family: Julius Sans One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 15px;
+  text-align: center;
+  background-color:black;
+  border: 0;
+  color: #FFFFFF;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: #350E88;
+  filter: drop-shadow(0px 5px 7px rgba(140, 0, 255, 5)); 
+  border: 0px transparent solid;
+  background-color: transparent;
 }
 
 .parent{
-position: fixed;
-width: 100%;
-height: fit-content;
-bottom: 0;
-text-align: center;
-align-content: center;
-z-index: 100;
-background: #000000;
-box-shadow: 0px -14px 47px #FFFFFF;
-border-top: 1px solid #350E88;
-
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  bottom: 0;
+  text-align: center;
+  align-content: center;
+  z-index: 100;
+  background: #000000;
+  box-shadow: 0px -14px 47px #FFFFFF;
+  border-top: 1px solid #350E88;
 }
-.playItems{
 
+.playItems{
   display:flex;
   justify-content: center;
   gap:8px;
-
 }
+
 .prevButt{
   background: url("/src/image/previousbutton.png");
- background-repeat: no-repeat;
-background-size: 100%;
-
-width: 70px;
-
-height: 70px;
-order:2;
-border: 0;
-margin-top: 6px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 70px;
+  height: 70px;
+  order:2;
+  border: 0;
+  margin-top: 6px;
 }
+
 .nextButt{
-background: url("/src/image/nextbutton.png");
- background-repeat: no-repeat;
-background-size: 100%;
-
-width: 70px; 
-
-height: 70px; 
-order: 5;
-border: 0;
-margin-top: 5px;
+  background: url("/src/image/nextbutton.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 70px; 
+  height: 70px; 
+  order: 5;
+  border: 0;
+  margin-top: 5px;
 }
+
 .playButt{
   background: url("/src/image/newplaybutton.png");
- background-repeat: no-repeat;
-background-size: 100%;
-;
-
-width: 70px;
-
-height: 70px;
-order: 4;
-border: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 70px;
+  height: 70px;
+  order: 4;
+  border: 0;
 }
 
 .pauseButt{
-   background: url("/src/image/pausebutton.png");
- background-repeat: no-repeat;
-background-size: 100%;
-;
-
-width: 60px;
-
-height: 60px;
-order: 3;
-border: 0;
+  background: url("/src/image/pausebutton.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 60px;
+  height: 60px;
+  order: 3;
+  border: 0;
 }
 
 .shuffleButt{
-order: 1;
-margin-bottom: 25px;
+  order: 1;
+  margin-bottom: 25px;
 }
 
 .loopButt{
-order: 6;
-margin-bottom: 2px;
-
-
+  order: 6;
+  margin-bottom: 2px;
 }
-
-
-

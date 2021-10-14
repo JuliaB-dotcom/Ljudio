@@ -6,8 +6,6 @@ function BigPlayer() {
 
   const [context, updateContext] = useContext(PlayerContext)
   const [progress, setProgress] = useState(0)
-  const [pauseUpdate, setPauseUpdate] = useState(false)
-  // console.log(context.album[0].thumbnails[0].url);
 
   useEffect(() => {
     if (!context.player) return
@@ -17,10 +15,6 @@ function BigPlayer() {
       let duration = context.player.getDuration()
       let playedPercent = currentTime * (100 / duration)
 
-      // TODO: don't update when user is moving the slider
-      if (playedPercent > 5) {
-        console.log("HEJHEJ", playedPercent);
-      }
       setProgress(playedPercent)
     }, 1000)
   }, [context.player])
@@ -28,16 +22,11 @@ function BigPlayer() {
 
   function changeSongPosition(e) {
     setProgress(e.target.value)
-
     let newPosition = context.player.getDuration() * (e.target.value / 100)
     console.log(newPosition)
-    // change position in song
     context.player.seekTo(newPosition, true)
   }
 
-  function changeVideoLastSecond() {
-
-  }
   return (
 
     <div className="bigPlayerDiv">
@@ -46,25 +35,15 @@ function BigPlayer() {
       <div className="btnDiv">
         <div className="progressBar">
           <div className="progressBarLine">
-
             <input
               className="slider"
-              // step="0.01"
               value={progress}
-              // min="1"
-              // max="100"
               onChange={changeSongPosition}
               type="range"
               style={{ width: '250%' }}
             />
           </div>
-
         </div>
-        {/* <button type="button" className="shuffle">shuffle</button>
-        <button type="button" className="previous"></button>
-        <button type="button" className="play"></button>
-        <button type="button" className="next"></button>
-        <button type="button" className="loop">Loop</button> */}
       </div>
     </div>
   )
