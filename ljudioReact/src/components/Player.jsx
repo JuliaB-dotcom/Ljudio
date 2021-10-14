@@ -36,7 +36,15 @@ function Player({ videoId }) {
 
       // TODO: don't update when user is moving the slider
       if (playedPercent > 5) {
-        nextSong();
+        if (context.queue.length == 0) {
+          console.log("INPUTSONGS");
+          nextInputSong();
+        }
+        else {
+          console.log("QUEUESONGS")
+          nextSong();
+
+        }
       }
     }, 1000)
   }, [context.player])
@@ -204,6 +212,25 @@ function Player({ videoId }) {
     console.log(index);
     let addIndex = index + 1;
     let newSong = context.queue[addIndex];
+    console.log(newSong);
+
+    context.player.loadVideoById(newSong.videoId)
+    context.currentSong = newSong;
+    updateContext({ currentSong: newSong });
+    setCurrentVideoId(newSong.videoId);
+  }
+
+
+  function nextInputSong() {
+    // updateContext({ inputSongs });
+    console.log("This is playing: ", context.currentSong);
+    let songPlaying = context.currentSong;
+    console.log("currentSong", context.currentSong);
+    console.log("QueueArray", context.inputSongs)
+    let index = context.inputSongs.indexOf(songPlaying);
+    console.log(index);
+    let addIndex = index + 1;
+    let newSong = context.inputSongs[addIndex];
     console.log(newSong);
 
     context.player.loadVideoById(newSong.videoId)

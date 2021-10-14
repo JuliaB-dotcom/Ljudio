@@ -32,6 +32,7 @@ function Search() {
     let result = await response.json()
     console.log(result.content)
     setSongs(result.content)
+    context.inputSongs = result.content
   }
 
   function songClick(song) {
