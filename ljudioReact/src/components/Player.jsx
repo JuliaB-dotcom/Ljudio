@@ -35,7 +35,7 @@ function Player({ videoId }) {
       let playedPercent = currentTime * (100 / duration)
 
       // TODO: don't update when user is moving the slider
-      if (playedPercent > 5) {
+      if (playedPercent > 98) {
         if (context.queue.length == 0) {
           console.log("INPUTSONGS");
           nextInputSong();
@@ -241,7 +241,6 @@ function Player({ videoId }) {
   function loopSong() {
     let currentSong = context.currentSong;
     context.player.loadVideoById(currentSong.videoId)
-
   }
 
   function autoNext() {
