@@ -33,17 +33,7 @@ function BigPlayer() {
       {/* <div className="albumImg" style={{ backgroundImage: `url(${context.album[0].thumbnails[0].url})` }}>
         </div> */}
       <div className="btnDiv">
-        <div className="progressBar">
-          <div className="progressBarLine">
-            <input
-              className="slider"
-              value={progress}
-              onChange={changeSongPosition}
-              type="range"
-              style={{ width: '250%' }}
-            />
-          </div>
-        </div>
+
       </div>
     </div>
   )
