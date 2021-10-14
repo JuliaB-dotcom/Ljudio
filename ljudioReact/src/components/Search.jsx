@@ -12,6 +12,7 @@ function Search() {
   const [context, updateContext] = useContext(PlayerContext)
   const [queue, setQueue] = useState()
 
+  //shows queue and playlist buttons
   function showDiv(song) {
     let buttonsDiv = document.getElementsByClassName("childTwo-2");
     if (buttonsDiv[0].style.display == "none") {
@@ -22,6 +23,7 @@ function Search() {
     }
   }
 
+  //fetch youtube api to get songs by user input
   async function searchSong() {
     let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/songs/' + input)
     let result = await response.json()
@@ -29,6 +31,7 @@ function Search() {
     context.inputSongs = result.content
   }
 
+  //when clicking on a song, the song will play in player
   function songClick(song) {
     setCurrentVideoId(song.videoId)
     context.player.loadVideoById(song.videoId)
@@ -36,18 +39,21 @@ function Search() {
     updateContext({ currentSong: song });
   }
 
+  //trigger input search when clicking "ENTER" key
   function triggerSearch(event) {
     if (event.key === 'Enter') {
       document.getElementsByClassName('searchBtn')[0].click();
     }
   }
 
+
   function sendSongToQueue(song) {
-    context.player.cueVideoById(song.videoId);
     context.queue.push(song);
     setQueue(context.queue);
   }
 
+  //when clicking on artist name, you will be redirected to the 
+  //artist page with artist info by fetching the url + browseId
   async function artistClick(song) {
     let response = await fetch('https://yt-music-api.herokuapp.com/api/yt/artist/' + song.artist.browseId)
     let result = await response.json()

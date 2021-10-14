@@ -5,18 +5,22 @@ import { PlayerContext } from '/src/contexts/PlayerContexts'
 import '/src/CSS/ArtistPage.css'
 
 function ArtistPage() {
+  //create global variable
   let { browseId } = useParams()
+
+  //get global constant variables
   const [context, updateContext] = useContext(PlayerContext)
   const [currentVideoId, setCurrentVideoId] = useState()
 
+  //when clicking on a song, the song will load in player
   function songClick(videoId) {
     setCurrentVideoId(videoId)
     context.player.loadVideoById(videoId)
   }
 
+  //function for hiding and showing the share sites in share button
   function showShare() {
     let shareDiv = document.getElementsByClassName("sharePlatform");
-    console.log(shareDiv[0].style.display);
     if (shareDiv[0].style.display == "none") {
       shareDiv[0].style.setProperty("display", "block")
     }
@@ -41,6 +45,7 @@ function ArtistPage() {
           </ul>
         </div>
       </div>
+      {/* print out each element in array as HTML */}
       {context.artist[0].products.songs.content.map(artistsong => (
         <div className="artistsSongs" onClick={() => songClick(artistsong.videoId)}>
           {artistsong.name}

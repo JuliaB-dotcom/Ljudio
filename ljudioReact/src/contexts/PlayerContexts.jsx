@@ -3,6 +3,8 @@ import React, { createContext, useState } from 'react'
 export const PlayerContext = createContext()
 
 function PlayerContextProvider(props) {
+
+  //returns a pair of values, the current state and the function that updates it
   const [context, setContext] = useState({
     player: null,
     queue: [],
@@ -12,11 +14,13 @@ function PlayerContextProvider(props) {
     clicked: ''
   })
 
+  //using spread to keep old data while replacing only the matching ones
   function updateContext(values) {
     setContext({
       ...context,
       ...values
     })
+
   }
 
   return (

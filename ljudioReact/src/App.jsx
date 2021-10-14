@@ -6,10 +6,10 @@ import ArtistPage from './components/ArtistPage'
 import Player from './components/Player'
 import Playlist from "./pages/Playlist"
 
+//use router to connect components and route between them
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 

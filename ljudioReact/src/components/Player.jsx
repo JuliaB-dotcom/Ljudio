@@ -4,6 +4,8 @@ import '/src/CSS/Player.css'
 import { useHistory } from "react-router-dom"
 
 function Player({ videoId }) {
+
+  //useEffect is called everytime component is rendered
   useEffect(() => {
     loadPlayer()
   }, [])
@@ -13,6 +15,7 @@ function Player({ videoId }) {
   const [context, updateContext] = useContext(PlayerContext)
   const [currentVideoId, setCurrentVideoId] = useState()
 
+  //checks playedPercent to call next song functions at the end of a song
   useEffect(() => {
     if (!context.player) return
 
@@ -31,6 +34,7 @@ function Player({ videoId }) {
     }, 1000)
   }, [context.player])
 
+  //load youtube player
   function loadPlayer() {
     let ytPlayer = new YT.Player('yt-player', {
       height: '0px',
@@ -58,8 +62,8 @@ function Player({ videoId }) {
   function previousSong() {
     let songPlaying = context.currentSong;
     let index = context.queue.indexOf(songPlaying);
-    let addIndex = index - 1;
-    let newSong = context.queue[addIndex];
+    let removeIndex = index - 1;
+    let newSong = context.queue[removeIndex];
     context.player.loadVideoById(newSong.videoId)
     updateContext({ currentSong: newSong });
     setCurrentVideoId(newSong.videoId);
@@ -76,6 +80,7 @@ function Player({ videoId }) {
     setCurrentVideoId(newSong.videoId);
   }
 
+  //same as nextSong, but using inputSong (user input in search) array instead
   function nextInputSong() {
     let songPlaying = context.currentSong;
     let index = context.inputSongs.indexOf(songPlaying);
@@ -87,6 +92,7 @@ function Player({ videoId }) {
     setCurrentVideoId(newSong.videoId);
   }
 
+  //part of the shuffle function
   let getRandom = function (min, max) {
     return Math.random() * (max - min) + min;
   };
@@ -117,6 +123,7 @@ function Player({ videoId }) {
         <div className="playItems">
         </div>
         <div className="textButtons">
+          {/* use router to route to a new component */}
           <button className="playlist" onClick={() => { history.push('/playlist') }}>PLAYLIST</button>
           <button className="playlist" onClick={() => { history.push('/queue') }}>Queue</button>
           <button className="playlist">RANDOM</button>

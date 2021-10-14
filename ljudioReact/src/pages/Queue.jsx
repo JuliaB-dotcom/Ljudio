@@ -7,11 +7,13 @@ function Queue() {
   const [currentVideoId, setCurrentVideoId] = useState()
   const [context, updateContext] = useContext(PlayerContext)
 
+  //remove chosen song from array
   function removeSong(song) {
     let index = context.queue.indexOf(song);
     context.queue.splice(index, 1);
   }
 
+  //play song from queue array
   function playSongFromQueue(song) {
     setCurrentVideoId(song.videoId)
     context.player.loadVideoById(song.videoId)

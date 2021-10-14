@@ -1,6 +1,6 @@
 import Search from './Search'
-function Start() {
 
+function Start() {
   return (
     <div>
       <Search />
