@@ -63,16 +63,18 @@ button{
   bottom: 0;
   text-align: center;
   align-content: center;
-  z-index: 100;
+  z-index: 99;
   background: #000000;
   box-shadow: 0px -14px 47px #FFFFFF;
   border-top: 1px solid #350E88;
+  justify-content: center;
 }
 
 .playItems{
   display:flex;
   justify-content: center;
   gap:8px;
+
 }
 
 .prevButt{
@@ -125,4 +127,32 @@ button{
 .loopButt{
   order: 6;
   margin-bottom: 2px;
+}
+
+
+
+/* .progressBarDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+} */
+.progressBarLine{
+  position: fixed;
+  top: 1200px;
+  left: 28px;
+  max-width: 33vw;
+
+
+}
+.progressBarDiv{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  
+}
+
+.slider{
+  cursor:pointer;
+  z-index: 100; 
+  left: 50px;
 }
