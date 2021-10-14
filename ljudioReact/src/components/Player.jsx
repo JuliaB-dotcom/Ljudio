@@ -14,6 +14,7 @@ function Player({ videoId }) {
   const [player, setPlayer] = useState()
   const [context, updateContext] = useContext(PlayerContext)
   const [currentVideoId, setCurrentVideoId] = useState()
+  const [progress, setProgress] = useState(0)
 
   //checks playedPercent to call next song functions at the end of a song
   useEffect(() => {
@@ -104,6 +105,28 @@ function Player({ videoId }) {
     context.player.loadVideoById(playThisSong.videoId);
   }
 
+  //progressbar
+  useEffect(() => {
+    if (!context.player) return
+
+    setInterval(() => {
+      let currentTime = context.player.getCurrentTime()
+      let duration = context.player.getDuration()
+      let playedPercent = currentTime * (100 / duration)
+
+      setProgress(playedPercent)
+    }, 1000)
+  }, [context.player])
+
+
+  function changeSongPosition(e) {
+    setProgress(e.target.value)
+    let newPosition = context.player.getDuration() * (e.target.value / 100)
+    console.log(newPosition)
+    context.player.seekTo(newPosition, true)
+  }
+
+
   return (
     <div>
       <div id="yt-player">
@@ -112,16 +135,27 @@ function Player({ videoId }) {
         <div className="songDiv123">
           <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>{context.currentSong.name}</h1>
         </div>
-        <div className="playItems">
-          <button type="button" className="shuffleButt" onClick={shuffleSongs}>shuffle</button>
-          <button className="prevButt" onClick={previousSong}></button>
-          <button className="pauseButt" onClick={pauseSong}></button>
-          <button className="playButt" onClick={playSong}></button>
-          <button id="nextBtn" className="nextButt" onClick={nextSong}></button>
-          <button id="loopBtn" type="button" className="loopButt">Loop</button>
+
+        <div className="playItems2">
+          <div className="playItems">
+            <button type="button" className="shuffleButt" onClick={shuffleSongs}>shuffle</button>
+            <button className="prevButt" onClick={previousSong}></button>
+            <button className="pauseButt" onClick={pauseSong}></button>
+            <button className="playButt" onClick={playSong}></button>
+            <button id="nextBtn" className="nextButt" onClick={nextSong}></button>
+            <button id="loopBtn" type="button" className="loopButt">Loop</button>
+          </div>
+          <div className="progressBarDiv playerItems">
+            <input
+              className="slider"
+              value={progress}
+              onChange={changeSongPosition}
+              type="range"
+              style={{ width: '80vw' }}
+            />
+          </div>
         </div>
-        <div className="playItems">
-        </div>
+
         <div className="textButtons">
           {/* use router to route to a new component */}
           <button className="playlist" onClick={() => { history.push('/playlist') }}>PLAYLIST</button>
