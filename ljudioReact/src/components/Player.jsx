@@ -241,7 +241,7 @@ function Player({ videoId }) {
   function loopSong() {
     let currentSong = context.currentSong;
     context.player.loadVideoById(currentSong.videoId)
-  
+
   }
 
   function autoNext() {
@@ -251,6 +251,22 @@ function Player({ videoId }) {
     let index = context.queue.indexOf();
 
 
+  }
+
+  let getRandom = function (min, max) {
+    return Math.random() * (max - min) + min;
+  };
+
+  function shuffleSongs() {
+    let num = Math.round(getRandom(0, context.inputSongs.length));
+
+    console.log("thisIsShuffle");
+    console.log("number : ", num);
+    console.log("allSongs: ", context.inputSongs);
+    console.log("RandomSong: ", context.inputSongs[num]);
+    let playThisSong = context.inputSongs[num];
+    setCurrentVideoId(playThisSong.videoId);
+    context.player.loadVideoById(playThisSong.videoId);
   }
   // function queueLoop(queue) {
 
@@ -284,7 +300,7 @@ function Player({ videoId }) {
 
         <div className="playItems">
 
-          <button type="button" className="shuffleButt">shuffle</button>
+          <button type="button" className="shuffleButt" onClick={shuffleSongs}>shuffle</button>
 
           <button className="prevButt" onClick={previousSong}></button>
           <button className="pauseButt" onClick={pauseSong}></button>
