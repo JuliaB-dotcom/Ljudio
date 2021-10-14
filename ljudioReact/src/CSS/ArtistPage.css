@@ -85,8 +85,6 @@
   line-height: 26px;  
   text-align: center;
   color: #FFFFFF;
-
-
 }
 
 .aboutTextDiv{
@@ -102,6 +100,8 @@
   background: rgba(0, 0, 0, 0.53);
   width: 70%;
   margin-bottom: 50%;
+   overflow: scroll;
+  height: 200px;
 }
 
 .sharePlatform li a{
