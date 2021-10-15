@@ -1,5 +1,4 @@
 import Start from "./components/Start"
-import BigPlayer from "./pages/BigPlayer"
 import Queue from './pages/Queue'
 import './CSS/App.css'
 import ArtistPage from './components/ArtistPage'
@@ -21,7 +20,6 @@ function App() {
         <main>
           <Route path="/" component={Start} />
           <Route path="/queue" exact component={Queue} />
-          <Route path="/bigplayer" exact component={BigPlayer} />
           <Route path="/playlist" exact component={Playlist} />
           <Route path="/artistpage" exact component={ArtistPage} />
           <Route path="/artistpage/:browseId" exact component={ArtistPage} />

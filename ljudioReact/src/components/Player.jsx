@@ -133,7 +133,7 @@ function Player({ videoId }) {
       </div>
       <div className="parent">
         <div className="songDiv123">
-          <h1 className="songName" onClick={() => { history.push('/bigplayer') }}>{context.currentSong.name}</h1>
+          <h1 className="songName">{context.currentSong.name}</h1>
         </div>
 
         <div className="playItems2">
