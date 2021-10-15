@@ -9,3 +9,6 @@ https://www.figma.com/file/DfEaywk7Qy609gf62TmViA/Ljudio?node-id=0%3A1
 
 UML/ER:
 https://drive.google.com/file/d/1pyE065khkNs4auvKdLW5Cp4Qe6ngPsRq/view?usp=sharing
+
+Gherkin:
+https://docs.google.com/document/d/1Q6TBsRbofKqqCu0vmA5UoiwiFL_Hm0gxtAZlzpi2_E4/edit?usp=sharing
